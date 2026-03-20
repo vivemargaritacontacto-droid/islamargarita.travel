@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useBooking } from "@/components/ui/BookingContext";
 
 interface ServiceCard {
   key: string;
@@ -34,6 +35,7 @@ const cardVariants = {
 export default function ServicesSection() {
   const t = useTranslations("Services");
   const tCta = useTranslations("globalCta");
+  const { openBooking } = useBooking();
 
   return (
     <section id="services" className="bg-[#F6F7F8] py-24">
@@ -67,6 +69,7 @@ export default function ServicesSection() {
             <motion.div
               key={service.key}
               variants={cardVariants}
+              onClick={() => openBooking(service.key)}
               className="relative rounded-xl overflow-hidden group cursor-pointer"
             >
               {/* Image */}
@@ -103,7 +106,10 @@ export default function ServicesSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center"
         >
-          <button className="bg-[#C9A84C] hover:bg-[#b8943d] text-[#0F2347] px-10 py-3.5 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-gold hover:shadow-gold-lg">
+          <button
+            onClick={() => openBooking()}
+            className="bg-[#C9A84C] hover:bg-[#b8943d] text-[#0F2347] px-10 py-3.5 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-gold hover:shadow-gold-lg"
+          >
             {tCta("bookNow")}
           </button>
         </motion.div>

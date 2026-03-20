@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Check } from "lucide-react";
+import { useBooking } from "@/components/ui/BookingContext";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -36,6 +37,7 @@ const plans = [
 
 export default function PricingSection() {
   const t = useTranslations("Pricing");
+  const { openBooking } = useBooking();
 
   return (
     <section id="pricing" className="bg-[#1B396A] py-24">
@@ -141,6 +143,7 @@ export default function PricingSection() {
 
                 {/* CTA button */}
                 <button
+                  onClick={() => openBooking()}
                   className={`w-full py-3 rounded-full font-semibold text-sm transition-colors ${
                     isCenter
                       ? "bg-[#0F2347] text-white hover:bg-[#1B396A]"

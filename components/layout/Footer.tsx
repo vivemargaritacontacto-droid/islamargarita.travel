@@ -1,13 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "@/src/i18n/navigation";
+import { useBooking } from "@/components/ui/BookingContext";
 
 export default function Footer() {
   const t = useTranslations("Footer");
   const tNav = useTranslations("Navbar");
+  const { openBooking } = useBooking();
+  const [footerEmail, setFooterEmail] = useState("");
 
   const tServices = useTranslations("Services");
 
@@ -21,9 +24,10 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { label: tNav("home"), href: "#" },
+    { label: tNav("home"), href: "#hero" },
     { label: tNav("service"), href: "#services" },
     { label: tNav("reviews"), href: "#reviews" },
+    { label: tNav("about"), href: "#about" },
     { label: tNav("faq"), href: "#faq" },
     { label: tNav("contact"), href: "#contact" },
   ];
@@ -35,12 +39,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           {/* Column 1: Logo + description + decorative stars + newsletter */}
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Image src="/images/services/logo.png" alt="WEN'S Logo" width={36} height={36} className="brightness-200" />
+            <a
+              href="#hero"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="flex items-center gap-2 mb-4 cursor-pointer"
+            >
+              <Image src="/images/services/logo_white.png" alt="WEN'S Logo" width={36} height={36} className="brightness-100" />
               <span className="text-2xl font-extrabold text-white">
                 WEN&apos;S
               </span>
-            </Link>
+            </a>
             <p className="text-slate-400 text-sm leading-relaxed mb-4">
               {t("description")}
             </p>
@@ -50,20 +61,33 @@ export default function Footer() {
               <span className="text-[#C9A84C] text-lg">★</span>
               <span className="text-[#C9A84C] text-lg">★</span>
             </div>
-            {/* Newsletter */}
-            <div className="flex">
+            {/* Newsletter → opens booking with email prefilled */}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (footerEmail.trim()) {
+                  openBooking({ email: footerEmail });
+                  setFooterEmail("");
+                }
+              }}
+              className="flex"
+            >
               <input
                 type="email"
+                required
+                value={footerEmail}
+                onChange={(e) => setFooterEmail(e.target.value)}
                 placeholder={t("emailPlaceholder")}
                 className="flex-1 bg-white/10 text-white placeholder:text-slate-400 text-sm px-4 py-2.5 rounded-l-lg border-none outline-none focus:bg-white/15 transition-colors"
               />
               <button
+                type="submit"
                 className="bg-[#C9A84C] hover:bg-[#b8943d] px-4 py-2.5 rounded-r-lg transition-colors"
                 aria-label={t("subscribe")}
               >
                 <ArrowRight className="w-4 h-4 text-[#0F2347]" />
               </button>
-            </div>
+            </form>
           </div>
 
           {/* Column 2: Services */}

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useBooking } from "@/components/ui/BookingContext";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -13,18 +14,13 @@ const fadeUp = {
   }),
 };
 
-const avatarGradients = [
-  "from-[#C9A84C] to-[#1B396A]",
-  "from-[#1B396A] to-[#C9A84C]",
-  "from-[#24508A] to-[#C9A84C]",
-  "from-[#C9A84C] to-[#24508A]",
-];
 
 export default function HeroSection() {
   const t = useTranslations("Hero");
+  const { openBooking } = useBooking();
 
   return (
-    <section className="relative bg-gradient-to-br from-[#0F2347] to-[#24508A] min-h-[85vh] pt-16 pb-32 overflow-hidden flex flex-col justify-center">
+    <section id="hero" className="relative bg-gradient-to-br from-[#0F2347] to-[#24508A] min-h-[85vh] pt-16 pb-32 overflow-hidden flex flex-col justify-center">
       {/* Decorative circle — top-right */}
       <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-white/5 pointer-events-none" />
       {/* Decorative circle — bottom-left */}
@@ -77,11 +73,11 @@ export default function HeroSection() {
               variants={fadeUp}
               className="flex flex-wrap gap-4 mb-8"
             >
-              <button className="bg-[#C9A84C] hover:bg-[#b8943d] text-[#0F2347] rounded-lg px-8 py-4 font-bold uppercase tracking-wider transition-colors duration-200 shadow-gold">
+              <button
+                onClick={() => openBooking()}
+                className="bg-[#C9A84C] hover:bg-[#b8943d] text-[#0F2347] rounded-lg px-8 py-4 font-bold uppercase tracking-wider transition-colors duration-200 shadow-gold"
+              >
                 {t("bookingCta")}
-              </button>
-              <button className="border-2 border-white/30 text-white rounded-lg px-8 py-4 font-bold uppercase tracking-wider hover:bg-white/10 transition-colors duration-200">
-                {t("howItWorksCta")}
               </button>
             </motion.div>
 

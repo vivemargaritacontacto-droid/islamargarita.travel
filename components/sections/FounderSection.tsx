@@ -26,7 +26,7 @@ export default function FounderSection() {
 
   return (
     <>
-      <section className="bg-[#1B396A] py-24 overflow-hidden">
+      <section id="about" className="bg-[#1B396A] py-24 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
           {/* Section tag */}
           <motion.div
