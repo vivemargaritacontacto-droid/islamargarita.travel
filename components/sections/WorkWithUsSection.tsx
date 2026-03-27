@@ -123,6 +123,7 @@ export default function WorkWithUsSection() {
                       initial="hidden"
                       animate="visible"
                     >
+                      
                       {/* Trust items — compact */}
                       {/* <motion.ul variants={fadeInUp} className="space-y-1.5 pb-2 border-b border-slate-100">
                         {(["trust1", "trust2", "trust3", "trust4"] as const).map((key) => (
