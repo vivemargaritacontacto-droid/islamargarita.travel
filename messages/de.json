@@ -58,10 +58,13 @@
     "conciergerie_desc": "Wir bieten einen vollständigen Service für das Sauberkeitsmanagement Ihrer Gebäude. Gemeinschaftsbereiche, Treppenhäuser, Aufzüge — alles sorgfältig und professionell.",
     "whatsapp_template": "Hallo Wen's Cleaning Services 👋\nIch interessiere mich für Ihren Service: {serviceName}\n📍 Adresse / Stadt:\n📅 Gewünschtes Datum:\n🔁 Häufigkeit: (einmalig / regelmäßig)\n📝 Weitere Details:\nBitte kontaktieren Sie mich so bald wie möglich."
   },
+  "TrustedLogos": {
+    "title": "Kunden, die uns vertrauen"
+  },
   "Reviews": {
-    "title": "Vertrauen von",
+    "title": "Mehr als",
     "titleHighlight": "50+",
-    "titleEnd": "zufriedenen Kunden in Genf und der Schweiz",
+    "titleEnd": "verifizierte Bewertungen von zufriedenen Kunden in Genf und der Schweiz",
     "review1Text": "Ich empfehle Wendy zu 100%. Sie und ihr Team leisten hervorragende Arbeit auf höchstem Niveau mit außergewöhnlicher Liebe zum Detail. Ich schätze auch die klare Kommunikation zu Aufgaben, Zeiten und Gebühren, und das Wissen, dass ich mich komplett von allen Aspekten der Reinigung lösen kann.",
     "review1Author": "Stéphanie Laurent",
     "review1Role": "Eigentümerin",

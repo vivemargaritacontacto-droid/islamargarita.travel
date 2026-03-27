@@ -9,10 +9,10 @@ export default function CTASection() {
   const { openBooking } = useBooking();
 
   return (
-    <section className="bg-[#1B396A] py-20">
+    <section className="bg-[#417360] py-20">
       <div className="max-w-2xl mx-auto px-4 text-center">
         <motion.h2
-          className="text-[#C9A84C] font-heading text-4xl md:text-5xl font-extrabold italic mb-6"
+          className="text-white font-heading text-4xl md:text-5xl font-extrabold italic mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -22,7 +22,7 @@ export default function CTASection() {
         </motion.h2>
 
         <motion.p
-          className="text-slate-300 text-xl mb-10"
+          className="text-white/80 text-xl mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

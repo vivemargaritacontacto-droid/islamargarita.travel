@@ -236,7 +236,7 @@ export default function ServicesSection() {
 
   return (
     <>
-      <section id="services" className="bg-[#F6F7F8] py-24">
+      <section id="services" className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           {/* Header */}
           <motion.div

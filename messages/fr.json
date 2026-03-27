@@ -58,10 +58,13 @@
     "conciergerie_desc": "Nous proposons un service complet pour la gestion de la propreté de vos bâtiments et immeubles. Parties communes, escaliers, ascenseurs — tout est pris en charge avec soin.",
     "whatsapp_template": "Bonjour Wen's Cleaning Services 👋\nJe suis intéressé(e) par votre service de : {serviceName}\n📍 Adresse / Ville :\n📅 Date souhaitée :\n🔁 Fréquence : (unique / régulière)\n📝 Détails supplémentaires :\nMerci de me contacter dès que possible."
   },
+  "TrustedLogos": {
+    "title": "Ils nous font confiance"
+  },
   "Reviews": {
-    "title": "Approuvé par",
+    "title": "Plus de",
     "titleHighlight": "50+",
-    "titleEnd": "clients satisfaits à Genève et en Suisse",
+    "titleEnd": "avis vérifiés de clients satisfaits à Genève et en Suisse",
     "review1Text": "Je recommande à 100% Wendy. Elle et son équipe font un travail exceptionnel à un très haut niveau avec une attention aux détails remarquable. J'apprécie aussi la communication très claire autour des tâches, des horaires et des tarifs, et le fait de pouvoir me libérer complètement de tous les aspects du nettoyage.",
     "review1Author": "Stéphanie Laurent",
     "review1Role": "Propriétaire",

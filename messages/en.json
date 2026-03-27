@@ -58,10 +58,13 @@
     "conciergerie_desc": "We offer a complete service for managing the cleanliness of your buildings. Common areas, staircases, elevators — all handled with care and professionalism.",
     "whatsapp_template": "Hello Wen's Cleaning Services 👋\nI am interested in your service: {serviceName}\n📍 Address / City:\n📅 Desired date:\n🔁 Frequency: (one-off / regular)\n📝 Additional details:\nThank you, please contact me as soon as possible."
   },
+  "TrustedLogos": {
+    "title": "Clients who trust us"
+  },
   "Reviews": {
-    "title": "Trusted by",
+    "title": "More than",
     "titleHighlight": "50+",
-    "titleEnd": "satisfied clients in Geneva and Switzerland",
+    "titleEnd": "verified reviews from happy clients in Geneva and Switzerland",
     "review1Text": "100% recommend Wendy. She and her team do outstanding work at a very high level with exceptional attention to detail. I also love the very clear communication around tasks, time and fees, and knowing I can completely let go of all aspects of cleaning.",
     "review1Author": "Stéphanie Laurent",
     "review1Role": "Homeowner",

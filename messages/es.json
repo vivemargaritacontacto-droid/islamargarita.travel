@@ -58,10 +58,13 @@
     "conciergerie_desc": "Ofrecemos un servicio completo para la gestión de la limpieza de tus edificios. Zonas comunes, escaleras, ascensores — todo con cuidado y profesionalismo.",
     "whatsapp_template": "Hola Wen's Cleaning Services 👋\nEstoy interesado/a en su servicio de: {serviceName}\n📍 Dirección / Ciudad:\n📅 Fecha deseada:\n🔁 Frecuencia: (única / regular)\n📝 Detalles adicionales:\nGracias, espero su respuesta."
   },
+  "TrustedLogos": {
+    "title": "Clientes que confían en nosotros"
+  },
   "Reviews": {
-    "title": "Aprobado por",
+    "title": "Más de",
     "titleHighlight": "50+",
-    "titleEnd": "clientes satisfechos en Ginebra y Suiza",
+    "titleEnd": "reseñas verificadas de clientes satisfechos en Ginebra y Suiza",
     "review1Text": "Recomiendo 100% a Wendy. Ella y su equipo hacen un trabajo excepcional a un nivel muy alto con una atención al detalle extraordinaria. Me encanta la comunicación clara sobre tareas, horarios y tarifas, y saber que puedo despreocuparme completamente de todos los aspectos de la limpieza.",
     "review1Author": "Stéphanie Laurent",
     "review1Role": "Propietaria",
