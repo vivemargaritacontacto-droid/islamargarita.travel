@@ -4,7 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
-import ServicesSection from "@/components/sections/ServicesSection";
+import ServiciosAlojamiento from "@/components/sections/ServiciosAlojamiento";
 import TrustedLogosSection from "@/components/sections/TrustedLogosSection";
 import TrustedBySection from "@/components/sections/TrustedBySection";
 // import PricingSection from "@/components/sections/PricingSection";
@@ -27,7 +27,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <ServicesSection />
+        <ServiciosAlojamiento />
         <TrustedLogosSection />
         <TrustedBySection />
         {/* <PricingSection /> */}

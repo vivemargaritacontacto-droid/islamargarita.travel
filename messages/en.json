@@ -33,8 +33,8 @@
     "cta": "REQUEST A QUOTE"
   },
   "Services": {
-    "title": "Our Services",
-    "subtitle": "Meticulous attention to detail across our full suite of professional services.",
+    "title": "Discover your vacation home",
+    "subtitle": "Enjoy a 2-level house, spacious and cozy, designed to offer comfort, privacy, and an unforgettable stay.",
     "office": "Office Cleaning",
     "officeDesc": "Professional workspace maintenance to the highest corporate standards.",
     "garden": "Concierge Service",
@@ -49,7 +49,21 @@
     "sofaDesc": "Preparation and restoration of spaces before and after your events.",
     "viewAll": "View All Services →",
     "readmore": "Read more",
-    "homeSubtitle": "Discover our cleaning services tailored to your needs. We operate in Geneva with professionalism, discretion and confidentiality.",
+    "homeSubtitle": "A space designed to disconnect, share, and create unforgettable moments, with comfortable and functional areas that invite rest. Relax by the pool and live a unique experience where every corner is designed to make you feel truly at home.",
+    "accommodation": {
+      "room1Title": "Master bedroom with private bathroom",
+      "room1Desc": "Comfortable and private master bedroom, ideal for total rest during your stay in Margarita.",
+      "room2Title": "Secondary bedroom with bathroom in the hallway",
+      "room2Desc": "Functional and comfortable second bedroom, with close access to a full bathroom in the hallway.",
+      "sofaTitle": "Rest area with double sofa bed",
+      "sofaDesc": "Additional space perfect for families or small groups, with a double sofa bed.",
+      "livingTitle": "Living room with Smart TV",
+      "livingDesc": "Cozy social area to relax, watch series, share and enjoy after the beach.",
+      "kitchenTitle": "Equipped kitchen and washer",
+      "kitchenDesc": "Everything you need for comfortable stays: equipped kitchen, dining room, and washer for greater convenience.",
+      "poolTitle": "Patio with barbecue and pool",
+      "poolDesc": "Enjoy outdoor gatherings on the patio with barbecue and access to common areas with pool."
+    },
     "appartements_desc": "We offer a complete cleaning service for your apartment or house. From regular maintenance to deep cleaning, our qualified team handles everything with professionalism and discretion.",
     "bureaux_desc": "We ensure regular cleaning and maintenance of your offices and professional spaces. Our team works around your schedule to guarantee a clean, hygienic work environment.",
     "bail_desc": "We perform thorough end-of-lease or post-construction cleaning. A turnkey service to recover your security deposit and return your property in perfect condition.",

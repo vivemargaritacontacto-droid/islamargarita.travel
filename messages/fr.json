@@ -33,8 +33,8 @@
     "cta": "DEMANDER UN DEVIS"
   },
   "Services": {
-    "title": "Nos Services",
-    "subtitle": "Une attention méticuleuse aux détails pour chaque type d'espace professionnel et résidentiel.",
+    "title": "Découvrez votre maison de vacances",
+    "subtitle": "Profitez d'une maison de 2 niveaux, spacieuse et accueillante, conçue pour offrir confort, intimité et un séjour inoubliable.",
     "office": "Nettoyage Bureaux",
     "officeDesc": "Entretien professionnel des espaces de travail selon les normes les plus exigeantes.",
     "garden": "Service Conciergerie",
@@ -49,7 +49,21 @@
     "sofaDesc": "Préparation et remise en état des espaces avant et après vos événements.",
     "viewAll": "Voir tous nos services →",
     "readmore": "En savoir plus",
-    "homeSubtitle": "Découvrez nos services de nettoyage adaptés à vos besoins. Nous intervenons à Genève avec professionnalisme, discrétion et confidentialité.",
+    "homeSubtitle": "Un espace conçu pour se déconnecter, partager et créer des moments inoubliables, avec des espaces confortables et fonctionnels qui invitent au repos. Détendez-vous au bord de la piscine et vivez une expérience unique où chaque recoin est conçu pour vous sentir vraiment chez vous.",
+    "accommodation": {
+      "room1Title": "Chambre principale avec salle de bain privée",
+      "room1Desc": "Chambre principale confortable et privée, idéale pour un repos total pendant votre séjour à Margarita.",
+      "room2Title": "Chambre secondaire avec salle de bain dans le couloir",
+      "room2Desc": "Deuxième chambre fonctionnelle et confortable, avec accès proche à une salle de bain complète dans le couloir.",
+      "sofaTitle": "Espace de repos avec canapé-lit double",
+      "sofaDesc": "Espace supplémentaire parfait pour les familles ou petits groupes, avec un canapé-lit double.",
+      "livingTitle": "Salon avec Smart TV",
+      "livingDesc": "Espace social accueillant pour se détendre, regarder des séries, partager et profiter après la plage.",
+      "kitchenTitle": "Cuisine équipée et lave-linge",
+      "kitchenDesc": "Tout le nécessaire pour des séjours confortables : cuisine équipée, salle à manger et lave-linge pour plus de praticité.",
+      "poolTitle": "Patio avec barbecue et piscine",
+      "poolDesc": "Profitez de réunions en plein air sur le patio avec barbecue et accès aux espaces communs avec piscine."
+    },
     "appartements_desc": "Nous proposons un service complet de nettoyage pour votre appartement ou maison. De l'entretien régulier au grand nettoyage, notre équipe qualifiée se charge de tout avec professionnalisme et discrétion.",
     "bureaux_desc": "Nous assurons le nettoyage régulier et l'entretien de vos bureaux et espaces professionnels. Notre équipe intervient selon vos horaires pour garantir un environnement de travail propre et hygiénique.",
     "bail_desc": "Nous réalisons un nettoyage en profondeur à la fin de votre bail ou chantier. Un service clé en main pour récupérer votre dépôt de garantie et remettre votre bien en parfait état.",
