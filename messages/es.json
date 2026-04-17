@@ -392,24 +392,59 @@
     "ctaBtn": "Presupuesto personalizado"
   },
   "faq": {
-    "title": "Preguntas frecuentes",
-    "subtitle": "Encuentra respuesta a las preguntas más habituales sobre nuestros servicios de limpieza.",
-    "q1": "¿Cuánto tiempo se tarda en limpiar toda la casa?",
-    "a1": "La duración depende del tamaño de la vivienda y del tipo de limpieza solicitada. En general, una limpieza completa lleva entre 2 y 5 horas. Siempre te informaremos del tiempo estimado antes de comenzar.",
-    "q2": "¿Traéis vuestros propios productos o debo dejar los míos?",
-    "a2": "Aportamos nuestros propios productos y equipos de limpieza profesionales. Si prefieres que usemos los tuyos, también es posible.",
-    "q3": "¿También podéis limpiar los cristales, el horno, el frigorífico o las persianas?",
-    "a3": "Sí, ofrecemos servicios adicionales como la limpieza de cristales, horno, frigorífico y persianas. Solo tienes que indicarlo al hacer tu reserva.",
-    "q4": "¿Podéis venir siempre el mismo día y a la misma hora?",
-    "a4": "Por supuesto. Podemos planificar una limpieza regular el día y a la hora que mejor te convenga.",
-    "q5": "¿Limpiais también el exterior o solo el interior?",
-    "a5": "Realizamos principalmente limpieza de interiores, pero también podemos ocuparnos del exterior bajo petición (balcones, terrazas, etc.).",
-    "q6": "¿Qué pasa si un día no puedo estar en casa?",
-    "a6": "Sin problema. Podemos acordar de antemano una forma de acceso a tu vivienda o aplazar la cita a otra fecha.",
-    "q7": "¿Trabajáis solos o con otras personas?",
-    "a7": "Wens Cleaning Service comenzó como un proyecto personal y, gracias a la confianza de nuestros clientes, hoy somos un equipo dedicado a ofrecer una limpieza profesional con un toque personal. Creemos que los detalles marcan la diferencia, y por eso cada servicio se realiza con dedicación, responsabilidad y pasión.",
-    "q8": "¿Qué métodos de pago aceptan?",
-    "a8": "Aceptamos únicamente transferencia bancaria. No aceptamos pagos en efectivo."
+    "title": "Preguntas frecuentes""subtitle": "Encuentra respuesta a las dudas más comunes sobre tu estadía en nuestro alquiler vacacional en Margarita.""q1": "¿Cuántas personas pueden hospedarse y cómo es el espacio?""a1":
+El townhouse cuenta con 114 m² distribuidos en 2 habitaciones,
+    2 baños y medio, sala de estar, comedor y cocina equipada. Dispone de cama queen, camas individuales y sofá cama, ideal para familias o grupos de hasta 6 personas.
+
+"q2": "¿Qué servicios incluye el alojamiento?""a2":
+Incluye aire acondicionado central, WiFi de fibra, Smart TV, lavadora, cocina equipada, nevera, licuadora, cafetera y calentador de agua. Además, tendrás acceso a piscina, parrillera y áreas sociales del condominio.
+
+"q3": "¿Cuenta con estacionamiento y seguridad?""a3":
+Sí, dispone de estacionamiento privado gratuito dentro de la urbanización y acceso con cámara de vigilancia en la entrada, brindando mayor seguridad durante tu estadía.
+
+"q4": "¿Cómo es el servicio de agua?""a4":
+La urbanización cuenta con suministro de agua diario y el townhouse dispone de 2 tanques de almacenamiento, garantizando disponibilidad continua.
+
+"q5": "¿Qué áreas comunes están disponibles?""a5":
+Podrás disfrutar de piscina, área de parrillera y zonas sociales con mesas ideales para compartir en familia o con amigos dentro del condominio.
+
+"q6": "¿Está cerca de playas y centros comerciales?""a6":
+Sí, está ubicado en Playa El Ángel, cerca de Playa Moreno, Bahía de Pampatar y otros atractivos turísticos. También se encuentra a pocos minutos caminando de centros comerciales como Parque Costa Azul, Rattan y Margarita City Place .
+
+"q7": "¿Cómo llegar al alojamiento?""a7":
+El townhouse está ubicado en Av. Aldonza Manrique, al lado del CC Parque Costa Azul, en Playa El Ángel. Es de fácil acceso caminando o en vehículo. Desde el aeropuerto internacional, el traslado toma aproximadamente 20–25 minutos .
+
+"q8": "¿Cuál es la estancia mínima?""a8":
+La estadía mínima es de 3 noches.
+
+"q9": "¿Cuáles son los precios por noche?""a9":
+Las tarifas varían según temporada, cantidad de personas y demanda:
+
+Temporada Baja (días de semana): 1–2 personas: desde 25 $ por noche
+3–4 personas: desde 30 $ – 35 $ por noche
+5–6 personas: desde 40 $ – 45 $ por noche
+
+Temporada Alta (fines de semana, feriados, julio, septiembre y diciembre): 1–2 personas: desde 50 $ por noche
+3–4 personas: desde 60 $ – 70 $ por noche
+5–6 personas: desde 80 $ – 90 $ por noche
+
+Tarifas sujetas a disponibilidad .
+
+"q10": "¿Los precios son negociables?""a10":
+Sí, ofrecemos precios especiales dependiendo de la cantidad de noches, número de huéspedes y temporada. Contáctanos para una cotización personalizada.
+
+"q11": "¿Qué métodos de pago aceptan?""a11":
+Ofrecemos varias opciones:
+
+Transferencia internacional en dólares a banco en Panamá
+Binance (USDT)
+Transferencias bancarias en Venezuela
+Pago móvil en bolívares (Bs.) a tasa del euro del día
+"q12": "¿Se cobra limpieza adicional?""a12":
+Sí, se aplica un pago único de limpieza de 30 $ por estadía, garantizando que el alojamiento esté en óptimas condiciones para tu llegada.
+
+"q13": "¿El alojamiento es apto para familias?""a13":
+Sí, es ideal para familias y grupos que buscan comodidad, buena ubicación y áreas para compartir en un ambiente tranquilo y seguro."
   },
   "fab": {
     "ariaLabel": "Menú de contacto",
