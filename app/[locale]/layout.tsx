@@ -19,9 +19,9 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "WEN'S Professional Cleaning Services",
+  title: "Isla Margarita Travel",
   description:
-    "Professional cleaning services for homes and offices. Trusted by 30k+ happy customers. Book your cleaning today!",
+    "Alquiler de Apartamentos Vacacionales en Playa el Angel",
   icons: {
     icon: "/images/services/logo.png",
     apple: "/images/services/logo.png",

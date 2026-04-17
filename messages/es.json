@@ -16,15 +16,15 @@
     "blog": "Blog"
   },
   "Hero": {
-    "badge": "🌴 Tu experiencia completa en Margarita",
-    "titleLine1": "Apartamentos vacacionales",
+    "badge": " .Margarita te espera. Nosotros te llevamos. — islamargarita.travel",
+    "titleLine1": "Alquileres vacacionales",
     "titleHighlight": "en Margarita",
     "titleLine2": "Margarita Travel",
     "description": "Tu experiencia completa en la Isla de Margarita. Apartamentos vacacionales premium, tours guiados auténticos y transporte privado desde el aeropuerto.",
     "bookingCta": "Reservar Ahora →",
     "howItWorksCta": "Ver cómo funciona",
     "socialProof": "Huéspedes satisfechos",
-    "bgTitle": "🌴 Tu experiencia completa en la Isla de Margarita",
+    "bgTitle": "Margarita te espera. Nosotros te llevamos. — islamargarita.travel",
     "bgSubtitle": "Margarita te espera. Nosotros te llevamos.",
     "bullet1": "🏠 Apartamentos vacacionales premium",
     "bullet2": "🗺️ Tours guiados auténticos",
@@ -249,7 +249,9 @@
     }
   },
   "residential": {
-    "hero": { "h2": "¡En Wen's, la limpieza es una historia de amor!" },
+    "hero": {
+      "h2": "¡En Wen's, la limpieza es una historia de amor!"
+    },
     "services": {
       "houseTitle": "Limpieza del hogar",
       "houseDesc": "Limpieza regular, mantenimiento de alfombras, moquetas, cristales y persianas.",
@@ -280,7 +282,9 @@
     "frequency3": "Mensual"
   },
   "commercial": {
-    "hero": { "h1": "El arte de la limpieza profesional" },
+    "hero": {
+      "h1": "El arte de la limpieza profesional"
+    },
     "services": {
       "endOfLeaseTitle": "Fin de obra / fin de contrato",
       "endOfLeaseDesc": "Limpieza y preparación post-construcción.",
