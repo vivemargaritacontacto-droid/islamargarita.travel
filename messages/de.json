@@ -33,8 +33,8 @@
     "cta": "ANGEBOT ANFORDERN"
   },
   "Services": {
-    "title": "Unsere Dienstleistungen",
-    "subtitle": "Akribische Liebe zum Detail in unserem gesamten professionellen Leistungsangebot.",
+    "title": "Entdecken Sie Ihr Ferienhaus",
+    "subtitle": "Genießen Sie ein 2-stöckiges Haus, geräumig und gemütlich, das Komfort, Privatsphäre und einen unvergesslichen Aufenthalt bietet.",
     "office": "Büroreinigung",
     "officeDesc": "Professionelle Pflege von Arbeitsräumen nach höchsten Unternehmensstandards.",
     "garden": "Concierge-Service",
@@ -49,7 +49,21 @@
     "sofaDesc": "Vorbereitung und Wiederherstellung von Räumlichkeiten vor und nach Ihren Events.",
     "viewAll": "Alle Dienstleistungen ansehen →",
     "readmore": "Mehr erfahren",
-    "homeSubtitle": "Entdecken Sie unsere auf Ihre Bedürfnisse zugeschnittenen Reinigungsdienstleistungen. Wir arbeiten in Genf mit Professionalität, Diskretion und Vertraulichkeit.",
+    "homeSubtitle": "Ein Raum, der zum Abschalten, Teilen und Schaffen unvergesslicher Momente einlädt, mit komfortablen und funktionalen Bereichen, die zur Erholung einladen. Entspannen Sie sich am Pool und erleben Sie ein einzigartiges Erlebnis, bei dem jede Ecke so gestaltet ist, dass Sie sich wirklich zu Hause fühlen.",
+    "accommodation": {
+      "room1Title": "Hauptschlafzimmer mit privatem Bad",
+      "room1Desc": "Komfortables und privates Hauptschlafzimmer, ideal für totale Erholung während Ihres Aufenthalts in Margarita.",
+      "room2Title": "Zweites Schlafzimmer mit Bad im Flur",
+      "room2Desc": "Funktionales und komfortables zweites Schlafzimmer mit nahem Zugang zu einem vollständigen Badezimmer im Flur.",
+      "sofaTitle": "Ruhebereich mit Doppelschlafsofa",
+      "sofaDesc": "Zusätzlicher Raum, perfekt für Familien oder kleine Gruppen, mit einem Doppelschlafsofa.",
+      "livingTitle": "Wohnzimmer mit Smart TV",
+      "livingDesc": "Gemütlicher sozialer Bereich zum Entspannen, Serien schauen, Teilen und Genießen nach dem Strand.",
+      "kitchenTitle": "Eingerichtete Küche und Waschmaschine",
+      "kitchenDesc": "Alles, was Sie für einen komfortablen Aufenthalt brauchen: eingerichtete Küche, Esszimmer und Waschmaschine für mehr Komfort.",
+      "poolTitle": "Terrasse mit Grill und Pool",
+      "poolDesc": "Genießen Sie Treffen im Freien auf der Terrasse mit Grill und Zugang zu Gemeinschaftsbereichen mit Pool."
+    },
     "appartements_desc": "Wir bieten einen vollständigen Reinigungsservice für Ihre Wohnung oder Ihr Haus. Von der regelmäßigen Pflege bis zur Tiefenreinigung kümmert sich unser qualifiziertes Team um alles — professionell und diskret.",
     "bureaux_desc": "Wir gewährleisten die regelmäßige Reinigung und Pflege Ihrer Büros und professionellen Räume. Unser Team arbeitet nach Ihrem Zeitplan für eine saubere, hygienische Arbeitsumgebung.",
     "bail_desc": "Wir führen gründliche Reinigungen am Ende Ihres Mietverhältnisses oder nach Bauarbeiten durch. Ein Rundum-Service zur Rückgabe Ihrer Kaution und zur perfekten Übergabe der Immobilie.",

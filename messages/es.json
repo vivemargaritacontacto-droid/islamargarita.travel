@@ -33,8 +33,8 @@
     "cta": "SOLICITAR UN PRESUPUESTO"
   },
   "Services": {
-    "title": "Nuestros Servicios",
-    "subtitle": "Atención meticulosa al detalle en toda nuestra gama de servicios profesionales.",
+    "title": "Descubre tu hogar vacacional",
+    "subtitle": "Disfruta de una casa de 2 niveles, amplia y acogedora, diseñada para ofrecer comodidad, privacidad y una estancia inolvidable.",
     "office": "Limpieza de Oficinas",
     "officeDesc": "Mantenimiento profesional de espacios de trabajo con los más altos estándares corporativos.",
     "garden": "Servicio de Conserjería",
@@ -49,7 +49,21 @@
     "sofaDesc": "Preparación y puesta a punto de espacios antes y después de tus eventos.",
     "viewAll": "Ver todos nuestros servicios →",
     "readmore": "Saber más",
-    "homeSubtitle": "Descubre nuestros servicios de limpieza adaptados a tus necesidades. Intervenimos en Ginebra con profesionalismo, discreción y confidencialidad.",
+    "homeSubtitle": "Un espacio pensado para desconectar, compartir y crear momentos inolvidables, con áreas cómodas y funcionales que invitan al descanso. Relájate en su zona de piscina y vive una experiencia única donde cada rincón está diseñado para que te sientas realmente en casa.",
+    "accommodation": {
+      "room1Title": "Habitación principal con baño privado",
+      "room1Desc": "Dormitorio principal cómodo y privado, ideal para descanso total durante tu estadía en Margarita.",
+      "room2Title": "Habitación secundaria con baño en el pasillo",
+      "room2Desc": "Segunda habitación funcional y cómoda, con acceso cercano a baño completo en el pasillo.",
+      "sofaTitle": "Sala de descanso con sofá cama matrimonial",
+      "sofaDesc": "Espacio adicional perfecto para familias o grupos pequeños, con sofá cama matrimonial.",
+      "livingTitle": "Sala de estar con Smart TV",
+      "livingDesc": "Área social acogedora para relajarte, ver series, compartir y disfrutar después de la playa.",
+      "kitchenTitle": "Cocina equipada y lavadora",
+      "kitchenDesc": "Todo lo necesario para estancias cómodas: cocina equipada, comedor y lavadora para mayor practicidad.",
+      "poolTitle": "Patio con parrillera y piscina",
+      "poolDesc": "Disfruta reuniones al aire libre en el patio con parrillera y acceso a áreas comunes con piscina."
+    },
     "appartements_desc": "Ofrecemos un servicio completo de limpieza para tu apartamento o casa. Desde el mantenimiento regular hasta la limpieza en profundidad, nuestro equipo cualificado se encarga de todo con profesionalismo y discreción.",
     "bureaux_desc": "Garantizamos la limpieza regular y el mantenimiento de tus oficinas y espacios profesionales. Nuestro equipo interviene según tus horarios para asegurar un entorno de trabajo limpio e higiénico.",
     "bail_desc": "Realizamos una limpieza en profundidad al final de tu contrato de arrendamiento u obra. Un servicio llave en mano para recuperar tu fianza y devolver tu propiedad en perfecto estado.",
