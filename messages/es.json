@@ -392,160 +392,135 @@
     "ctaBtn": "Presupuesto personalizado"
   },
   "faq": {
-    "title": "Preguntas frecuentes""subtitle": "Encuentra respuesta a las dudas más comunes sobre tu estadía en nuestro alquiler vacacional en Margarita.""q1": "¿Cuántas personas pueden hospedarse y cómo es el espacio?""a1":
-El townhouse cuenta con 114 m² distribuidos en 2 habitaciones,
-    2 baños y medio, sala de estar, comedor y cocina equipada. Dispone de cama queen, camas individuales y sofá cama, ideal para familias o grupos de hasta 6 personas.
-
-"q2": "¿Qué servicios incluye el alojamiento?""a2":
-Incluye aire acondicionado central, WiFi de fibra, Smart TV, lavadora, cocina equipada, nevera, licuadora, cafetera y calentador de agua. Además, tendrás acceso a piscina, parrillera y áreas sociales del condominio.
-
-"q3": "¿Cuenta con estacionamiento y seguridad?""a3":
-Sí, dispone de estacionamiento privado gratuito dentro de la urbanización y acceso con cámara de vigilancia en la entrada, brindando mayor seguridad durante tu estadía.
-
-"q4": "¿Cómo es el servicio de agua?""a4":
-La urbanización cuenta con suministro de agua diario y el townhouse dispone de 2 tanques de almacenamiento, garantizando disponibilidad continua.
-
-"q5": "¿Qué áreas comunes están disponibles?""a5":
-Podrás disfrutar de piscina, área de parrillera y zonas sociales con mesas ideales para compartir en familia o con amigos dentro del condominio.
-
-"q6": "¿Está cerca de playas y centros comerciales?""a6":
-Sí, está ubicado en Playa El Ángel, cerca de Playa Moreno, Bahía de Pampatar y otros atractivos turísticos. También se encuentra a pocos minutos caminando de centros comerciales como Parque Costa Azul, Rattan y Margarita City Place .
-
-"q7": "¿Cómo llegar al alojamiento?""a7":
-El townhouse está ubicado en Av. Aldonza Manrique, al lado del CC Parque Costa Azul, en Playa El Ángel. Es de fácil acceso caminando o en vehículo. Desde el aeropuerto internacional, el traslado toma aproximadamente 20–25 minutos .
-
-"q8": "¿Cuál es la estancia mínima?""a8":
-La estadía mínima es de 3 noches.
-
-"q9": "¿Cuáles son los precios por noche?""a9":
-Las tarifas varían según temporada, cantidad de personas y demanda:
-
-Temporada Baja (días de semana): 1–2 personas: desde 25 $ por noche
-3–4 personas: desde 30 $ – 35 $ por noche
-5–6 personas: desde 40 $ – 45 $ por noche
-
-Temporada Alta (fines de semana, feriados, julio, septiembre y diciembre): 1–2 personas: desde 50 $ por noche
-3–4 personas: desde 60 $ – 70 $ por noche
-5–6 personas: desde 80 $ – 90 $ por noche
-
-Tarifas sujetas a disponibilidad .
-
-"q10": "¿Los precios son negociables?""a10":
-Sí, ofrecemos precios especiales dependiendo de la cantidad de noches, número de huéspedes y temporada. Contáctanos para una cotización personalizada.
-
-"q11": "¿Qué métodos de pago aceptan?""a11":
-Ofrecemos varias opciones:
-
-Transferencia internacional en dólares a banco en Panamá
-Binance (USDT)
-Transferencias bancarias en Venezuela
-Pago móvil en bolívares (Bs.) a tasa del euro del día
-"q12": "¿Se cobra limpieza adicional?""a12":
-Sí, se aplica un pago único de limpieza de 30 $ por estadía, garantizando que el alojamiento esté en óptimas condiciones para tu llegada.
-
-"q13": "¿El alojamiento es apto para familias?""a13":
-Sí, es ideal para familias y grupos que buscan comodidad, buena ubicación y áreas para compartir en un ambiente tranquilo y seguro."
-  },
-  "fab": {
-    "ariaLabel": "Menú de contacto",
-    "openLabel": "Abrir el menú de contacto",
-    "closeLabel": "Cerrar el menú de contacto",
-    "whatsapp": "WhatsApp",
-    "chatbot": "Asistente IA",
-    "notification": "Nuevo mensaje"
-  },
-  "chatbot": {
-    "title": "Asistente Wen's",
-    "status": "En línea · Responde al instante",
-    "poweredBy": "Impulsado por IA",
-    "welcome": "¡Hola! 👋 Soy el asistente IA de Wen's. Puedo ayudarte a reservar una limpieza, consultar nuestros precios o responder tus preguntas. ¿En qué puedo ayudarte hoy?",
-    "placeholder": "Escribe un mensaje...",
-    "quickReply1": "📋 Reservar",
-    "quickReply2": "💰 Precios",
-    "quickReply3": "📞 Llamarnos",
-    "whatsappMessage": "¡Hola! Me gustaría reservar un servicio de limpieza con Wen's."
-  },
-  "BookingForm": {
-    "title": "Reserva tu Limpieza",
-    "subtitle": "Completa los datos y te contactaremos por WhatsApp",
-    "close": "Cerrar",
-    "selectService": "Selecciona un Servicio",
-    "personalInfo": "Tu Información",
-    "preferences": "Preferencias",
-    "placeholderName": "Nombre completo *",
-    "placeholderPhone": "Número de teléfono *",
-    "placeholderEmail": "Email (opcional)",
-    "placeholderMessage": "Detalles adicionales o solicitudes especiales...",
-    "labelName": "Nombre",
-    "labelPhone": "Teléfono",
-    "labelEmail": "Email",
-    "labelService": "Servicio",
-    "labelFrequency": "Frecuencia",
-    "labelTime": "Horario Preferido",
-    "labelDate": "Fecha Preferida",
-    "labelMessage": "Detalles",
-    "frequency_once": "Puntual",
-    "frequency_weekly": "Semanal",
-    "frequency_monthly": "Mensual",
-    "time_morning": "Mañana",
-    "time_afternoon": "Tarde",
-    "time_evening": "Noche",
-    "submitWhatsapp": "Enviar por WhatsApp",
-    "whatsappNote": "Serás redirigido a WhatsApp para confirmar tu solicitud",
-    "whatsappGreeting": "¡Hola! Me gustaría solicitar un servicio de limpieza con Wen's.",
-    "successTitle": "¡Solicitud Enviada!",
-    "successMessage": "Tu mensaje se ha abierto en WhatsApp. Te responderemos lo antes posible.",
-    "successClose": "Cerrar"
-  },
-  "WhyWens": {
-    "title": "¿Por qué elegir IslaMargarita.Travel?",
-    "subtitle": "Cuatro pilares que definen una experiencia vacacional sin preocupaciones.",
-    "card1Title": "Ubicaciones privilegiadas",
-    "card1Desc": "Alojamientos seleccionados en las mejores zonas de la isla para que disfrutes cada momento.",
-    "card2Title": "Confianza y seguridad",
-    "card2Desc": "Propiedades verificadas y atención confiable para una estadía tranquila y sin sorpresas.",
-    "card3Title": "Experiencia a tu medida",
-    "card3Desc": "Opciones flexibles adaptadas a tu estilo de viaje: descanso, aventura o escapada romántica.",
-    "card4Title": "Atención constante",
-    "card4Desc": "Acompañamiento antes, durante y después de tu viaje con soporte personalizado.",
-    "closingQuote": "Tu experiencia en la isla comienza con una buena elección.",
-    "sideTag": "Nuestro compromiso",
-    "sideTitle": "Mucho más que un alojamiento",
-    "sideText1": "En IslaMargarita.Travel creemos que una estadía perfecta no depende solo del lugar, sino de cada detalle que la rodea. Por eso seleccionamos cuidadosamente cada propiedad para garantizar comodidad, ubicación estratégica y una experiencia auténtica en la isla.",
-    "sideText2": "Desde tu llegada hasta tu salida, nuestro equipo está disponible para acompañarte y asegurarse de que vivas Margarita con total tranquilidad. Porque más que hospedaje, ofrecemos confianza, respaldo y momentos inolvidables.",
-    "imageAlt": "Apartamento vacacional con vista al mar en Isla de Margarita"
-  },
-  "WorkWithUs": {
-    "sectionTag": "¿Listo para tu viaje?",
-    "title": "Tu experiencia en Margarita comienza aquí",
-    "description": "Reserva tu alojamiento, transporte o experiencia en la Isla de Margarita con total confianza. Nuestro equipo se encarga de cada detalle para que solo tengas que disfrutar tu viaje.",
-    "trust1": "Alojamientos verificados en las mejores zonas de la isla",
-    "trust2": "Atención personalizada antes y durante tu estadía",
-    "trust3": "Reservas flexibles adaptadas a tu plan de viaje",
-    "trust4": "Asistencia local confiable en todo momento",
-    "formTitle": "Reserva tu experiencia",
-    "formSubtitle": "Completa el formulario y te contactaremos para organizar tu estadía perfecta en Margarita.",
-    "placeholderName": "Nombre completo *",
-    "placeholderEmail": "Correo electrónico (opcional)",
-    "placeholderPhone": "Teléfono *",
-    "placeholderMessage": "Cuéntanos tus necesidades ",
-    "labelName": "Nombre",
-    "labelEmail": "Email",
-    "labelPhone": "Teléfono",
-    "labelMessage": "Detalles",
-    "submitBtn": "Enviar por WhatsApp",
-    "whatsappNote": "Serás redirigido a WhatsApp para confirmar tu solicitud",
-    "whatsappTemplate": "Hola IslaMargarita.Travel 👋\nMe gustaría consultar disponibilidad y reservar.\n\nDetalles de mi viaje:\n- Fechas:\n- Número de personas:\n- Tipo de servicio (alojamiento, transporte, tours):\n\nQuedo atento/a a su respuesta. ¡Gracias!",
-    "successTitle": "¡Solicitud enviada!",
-    "successMessage": "Tu mensaje se ha abierto en WhatsApp. Nos pondremos en contacto contigo pronto.",
-    "imageAlt": "Servicio de Alquileres en Margarita",
-    "badgeQuote": "Tu espacio merece lo mejor."
-  },
-  "reviewsPage": {
-    "h1": "Opiniones de viajeros y experiencias reales",
-    "subtitle": "Valoraciones de clientes de IslaMargarita.Travel | Alquiler vacacional, tours y transporte en Isla de Margarita",
-    "ratingLabel": "Valoración media",
-    "ratingValue": "4.9/5",
-    "totalReviews": "Basado en experiencias verificadas de Google"
+    "title": "Preguntas frecuentes""subtitle": "Encuentra respuesta a las dudas más comunes sobre tu estadía en nuestro alquiler vacacional en Margarita.",
+    {
+      "q1": "¿Cuántas personas pueden hospedarse y cómo es el espacio?",
+      "a1": "El townhouse cuenta con 114 m² distribuidos en 2 habitaciones, 2 baños y medio, sala de estar, comedor y cocina equipada. Dispone de cama queen, camas individuales y sofá cama, ideal para familias o grupos de hasta 6 personas.",
+      "q2": "¿Qué servicios incluye el alojamiento?",
+      "a2": "Incluye aire acondicionado central, WiFi de fibra, Smart TV, lavadora, cocina equipada, nevera, licuadora, cafetera y calentador de agua. Además, tendrás acceso a piscina, parrillera y áreas sociales del condominio.",
+      "q3": "¿Cuenta con estacionamiento y seguridad?",
+      "a3": "Sí, dispone de estacionamiento privado gratuito dentro de la urbanización y acceso con cámara de vigilancia en la entrada, brindando mayor seguridad durante tu estadía.",
+      "q4": "¿Cómo es el servicio de agua?",
+      "a4": "La urbanización cuenta con suministro de agua diario y el townhouse dispone de 2 tanques de almacenamiento, garantizando disponibilidad continua durante tu estadía.",
+      "q5": "¿Qué áreas comunes están disponibles?",
+      "a5": "Podrás disfrutar de piscina, área de parrillera y zonas sociales con mesas ideales para compartir en familia o con amigos dentro del condominio.",
+      "q6": "¿Está cerca de playas y centros comerciales?",
+      "a6": "Sí, está ubicado en Playa El Ángel, cerca de Playa Moreno, Bahía de Pampatar y otros atractivos turísticos. También se encuentra a pocos minutos de centros comerciales como Parque Costa Azul y Margarita City Place.",
+      "q7": "¿Cómo llegar al alojamiento?",
+      "a7": "El townhouse está ubicado en Av. Aldonza Manrique, al lado del CC Parque Costa Azul, en Playa El Ángel. Es de fácil acceso caminando o en vehículo. Desde el aeropuerto internacional, el traslado toma aproximadamente 20–25 minutos.",
+      "q8": "¿Cuál es la estancia mínima?",
+      "a8": "La estadía mínima es de 3 noches.",
+      "q9": "¿Cuáles son los precios por noche?",
+      "a9": "Las tarifas varían según temporada, cantidad de personas y demanda. Temporada baja (días de semana): 1–2 personas desde 25$, 3–4 personas desde 30$ a 35$, 5–6 personas desde 40$ a 45$. Temporada alta (fines de semana, feriados, julio, septiembre y diciembre): 1–2 personas desde 50$, 3–4 personas desde 60$ a 70$, 5–6 personas desde 80$ a 90$ por noche.",
+      "q10": "¿Los precios son negociables?",
+      "a10": "Sí, los precios son negociables dependiendo de la cantidad de noches, número de huéspedes y temporada. Ofrecemos mejores tarifas para estadías largas.",
+      "q11": "¿Qué métodos de pago aceptan?",
+      "a11": "Aceptamos transferencia internacional en dólares a banco en Panamá, pagos en Binance (USDT), transferencias bancarias en Venezuela y pago móvil en bolívares a tasa del euro del día.",
+      "q12": "¿Se cobra limpieza adicional?",
+      "a12": "Sí, se aplica un pago único de limpieza de 30$ por estadía, garantizando que el alojamiento esté en óptimas condiciones antes de tu llegada.",
+      "q13": "¿El alojamiento es apto para familias?",
+      "a13": "Sí, es ideal para familias y grupos que buscan comodidad, buena ubicación y áreas para compartir en un ambiente tranquilo y seguro."
+    },
+    "fab": {
+      "ariaLabel": "Menú de contacto",
+      "openLabel": "Abrir el menú de contacto",
+      "closeLabel": "Cerrar el menú de contacto",
+      "whatsapp": "WhatsApp",
+      "chatbot": "Asistente IA",
+      "notification": "Nuevo mensaje"
+    },
+    "chatbot": {
+      "title": "Asistente Margarita Travel",
+      "status": "En línea · Responde al instante",
+      "poweredBy": "Impulsado por IA",
+      "welcome": "¡Hola! 👋 Soy el asistente IA de Wen's. Puedo ayudarte a reservar una limpieza, consultar nuestros precios o responder tus preguntas. ¿En qué puedo ayudarte hoy?",
+      "placeholder": "Escribe un mensaje...",
+      "quickReply1": "📋 Reservar",
+      "quickReply2": "💰 Precios",
+      "quickReply3": "📞 Llamarnos",
+      "whatsappMessage": "¡Hola! Me gustaría reservar un servicio de limpieza con Wen's."
+    },
+    "BookingForm": {
+      "title": "Reserva tu Limpieza",
+      "subtitle": "Completa los datos y te contactaremos por WhatsApp",
+      "close": "Cerrar",
+      "selectService": "Selecciona un Servicio",
+      "personalInfo": "Tu Información",
+      "preferences": "Preferencias",
+      "placeholderName": "Nombre completo *",
+      "placeholderPhone": "Número de teléfono *",
+      "placeholderEmail": "Email (opcional)",
+      "placeholderMessage": "Detalles adicionales o solicitudes especiales...",
+      "labelName": "Nombre",
+      "labelPhone": "Teléfono",
+      "labelEmail": "Email",
+      "labelService": "Servicio",
+      "labelFrequency": "Frecuencia",
+      "labelTime": "Horario Preferido",
+      "labelDate": "Fecha Preferida",
+      "labelMessage": "Detalles",
+      "frequency_once": "Puntual",
+      "frequency_weekly": "Semanal",
+      "frequency_monthly": "Mensual",
+      "time_morning": "Mañana",
+      "time_afternoon": "Tarde",
+      "time_evening": "Noche",
+      "submitWhatsapp": "Enviar por WhatsApp",
+      "whatsappNote": "Serás redirigido a WhatsApp para confirmar tu solicitud",
+      "whatsappGreeting": "¡Hola! Me gustaría solicitar un servicio de limpieza con Wen's.",
+      "successTitle": "¡Solicitud Enviada!",
+      "successMessage": "Tu mensaje se ha abierto en WhatsApp. Te responderemos lo antes posible.",
+      "successClose": "Cerrar"
+    },
+    "WhyWens": {
+      "title": "¿Por qué elegir IslaMargarita.Travel?",
+      "subtitle": "Cuatro pilares que definen una experiencia vacacional sin preocupaciones.",
+      "card1Title": "Ubicaciones privilegiadas",
+      "card1Desc": "Alojamientos seleccionados en las mejores zonas de la isla para que disfrutes cada momento.",
+      "card2Title": "Confianza y seguridad",
+      "card2Desc": "Propiedades verificadas y atención confiable para una estadía tranquila y sin sorpresas.",
+      "card3Title": "Experiencia a tu medida",
+      "card3Desc": "Opciones flexibles adaptadas a tu estilo de viaje: descanso, aventura o escapada romántica.",
+      "card4Title": "Atención constante",
+      "card4Desc": "Acompañamiento antes, durante y después de tu viaje con soporte personalizado.",
+      "closingQuote": "Tu experiencia en la isla comienza con una buena elección.",
+      "sideTag": "Nuestro compromiso",
+      "sideTitle": "Mucho más que un alojamiento",
+      "sideText1": "En IslaMargarita.Travel creemos que una estadía perfecta no depende solo del lugar, sino de cada detalle que la rodea. Por eso seleccionamos cuidadosamente cada propiedad para garantizar comodidad, ubicación estratégica y una experiencia auténtica en la isla.",
+      "sideText2": "Desde tu llegada hasta tu salida, nuestro equipo está disponible para acompañarte y asegurarse de que vivas Margarita con total tranquilidad. Porque más que hospedaje, ofrecemos confianza, respaldo y momentos inolvidables.",
+      "imageAlt": "Apartamento vacacional con vista al mar en Isla de Margarita"
+    },
+    "WorkWithUs": {
+      "sectionTag": "¿Listo para tu viaje?",
+      "title": "Tu experiencia en Margarita comienza aquí",
+      "description": "Reserva tu alojamiento, transporte o experiencia en la Isla de Margarita con total confianza. Nuestro equipo se encarga de cada detalle para que solo tengas que disfrutar tu viaje.",
+      "trust1": "Alojamientos verificados en las mejores zonas de la isla",
+      "trust2": "Atención personalizada antes y durante tu estadía",
+      "trust3": "Reservas flexibles adaptadas a tu plan de viaje",
+      "trust4": "Asistencia local confiable en todo momento",
+      "formTitle": "Reserva tu experiencia",
+      "formSubtitle": "Completa el formulario y te contactaremos para organizar tu estadía perfecta en Margarita.",
+      "placeholderName": "Nombre completo *",
+      "placeholderEmail": "Correo electrónico (opcional)",
+      "placeholderPhone": "Teléfono *",
+      "placeholderMessage": "Cuéntanos tus necesidades ",
+      "labelName": "Nombre",
+      "labelEmail": "Email",
+      "labelPhone": "Teléfono",
+      "labelMessage": "Detalles",
+      "submitBtn": "Enviar por WhatsApp",
+      "whatsappNote": "Serás redirigido a WhatsApp para confirmar tu solicitud",
+      "whatsappTemplate": "Hola IslaMargarita.Travel 👋\nMe gustaría consultar disponibilidad y reservar.\n\nDetalles de mi viaje:\n- Fechas:\n- Número de personas:\n- Tipo de servicio (alojamiento, transporte, tours):\n\nQuedo atento/a a su respuesta. ¡Gracias!",
+      "successTitle": "¡Solicitud enviada!",
+      "successMessage": "Tu mensaje se ha abierto en WhatsApp. Nos pondremos en contacto contigo pronto.",
+      "imageAlt": "Servicio de Alquileres en Margarita",
+      "badgeQuote": "Tu espacio merece lo mejor."
+    },
+    "reviewsPage": {
+      "h1": "Opiniones de viajeros y experiencias reales",
+      "subtitle": "Valoraciones de clientes de IslaMargarita.Travel | Alquiler vacacional, tours y transporte en Isla de Margarita",
+      "ratingLabel": "Valoración media",
+      "ratingValue": "4.9/5",
+      "totalReviews": "Basado en experiencias verificadas de Google"
+    }
   }
-}
