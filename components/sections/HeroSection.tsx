@@ -39,28 +39,35 @@ export default function HeroSection() {
 
       {/* Content — left aligned */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 py-32">
-        <div className="max-w-xl">
-          {/* Main title */}
-          <motion.h1
+        <div className="max-w-2xl">
+          {/* Logo */}
+          <motion.div
             custom={0}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-md"
+            className="mb-6"
           >
-            {t("bgTitle")}
-          </motion.h1>
+            <Image
+              src="/images/logo-margarita-travel.png"
+              alt="Margarita Travel"
+              width={280}
+              height={165}
+              className="drop-shadow-lg"
+              priority
+            />
+          </motion.div>
 
-          {/* Subtitle */}
-          <motion.p
+          {/* Main title */}
+          <motion.h1
             custom={1}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-lg md:text-xl text-white/90 font-semibold mb-8 drop-shadow-sm"
+            className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6 drop-shadow-md"
           >
-            {t("bgSubtitle")}
-          </motion.p>
+            {t("bgTitle")}
+          </motion.h1>
 
           {/* Bullets */}
           <motion.ul
@@ -68,23 +75,40 @@ export default function HeroSection() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="flex flex-col gap-3 mb-10"
+            className="flex flex-col gap-3 mb-6"
           >
             {bullets.map((bullet, i) => (
-              <li key={i} className="flex items-center gap-3 text-white text-base font-medium drop-shadow-sm">
-                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 12 10" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M1 5l3 3 7-7" />
-                  </svg>
-                </span>
+              <li key={i} className="flex items-center gap-3 text-white text-base md:text-lg font-medium drop-shadow-sm">
                 {bullet}
               </li>
             ))}
           </motion.ul>
 
+          {/* Location */}
+          <motion.p
+            custom={3}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="text-lg md:text-xl text-white/90 font-semibold mb-4 drop-shadow-sm"
+          >
+            {t("location")}
+          </motion.p>
+
+          {/* Tagline */}
+          <motion.p
+            custom={4}
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="text-base md:text-lg text-white/80 italic mb-8 drop-shadow-sm"
+          >
+            {t("tagline")}
+          </motion.p>
+
           {/* CTA button */}
           <motion.div
-            custom={3}
+            custom={5}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
