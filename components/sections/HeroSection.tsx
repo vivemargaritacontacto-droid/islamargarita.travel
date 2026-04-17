@@ -48,14 +48,7 @@ export default function HeroSection() {
             variants={fadeUp}
             className="mb-6"
           >
-            <Image
-              src="/images/logo-margarita-travel.png"
-              alt="Margarita Travel"
-              width={280}
-              height={165}
-              className="drop-shadow-lg"
-              priority
-            />
+
           </motion.div>
 
           {/* Main title */}
