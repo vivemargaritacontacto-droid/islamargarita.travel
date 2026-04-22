@@ -1,74 +1,82 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Minus } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const faqKeys = [1, 2, 3, 4, 5, 6, 7, 8] as const;
+const QUESTIONS = Array.from({ length: 17 }, (_, i) => i + 1) as number[];
 
-export default function FAQSection() {
-  const t = useTranslations("faq");
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggle = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
-  };
+export default function FAQ() {
+  const t = useTranslations("PlayaElAngel.faq");
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="bg-[#0F2347] py-24">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+    <section id="faq" className="bg-cream px-6 py-20">
+      <div className="mx-auto max-w-[1200px]">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center mb-12"
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto mb-12 max-w-2xl text-center"
         >
-          <h2 className="text-white font-heading text-3xl md:text-4xl font-extrabold">
-            {t("title")}
+          <div className="mb-3 text-[13px] font-semibold uppercase tracking-[2px] text-coral">
+            {t("label")}
+          </div>
+          <h2 className="text-[clamp(1.8rem,4vw,2.6rem)] font-bold leading-[1.15] text-ink">
+            {t("titleLead")}{" "}
+            <span className="font-pacifico font-normal text-turquoise">
+              {t("titleHighlight")}
+            </span>{" "}
+            {t("titleTail")}
           </h2>
-          {/* Gold divider */}
-          <div className="w-16 h-1 bg-[#C9A84C] mx-auto mt-4 mb-2" />
-          <p className="mt-2 text-slate-300 text-lg font-sans">
-            {t("subtitle")}
-          </p>
         </motion.div>
 
-        <div className="divide-y divide-white/10">
-          {faqKeys.map((key) => {
-            const isOpen = openIndex === key;
-
+        <div className="mx-auto flex max-w-[880px] flex-col gap-3">
+          {QUESTIONS.map((n) => {
+            const isOpen = open === n;
             return (
-              <div key={key} className="py-5">
+              <div
+                key={n}
+                className={`overflow-hidden rounded-2xl border-[1.5px] bg-white transition-colors ${
+                  isOpen ? "border-turquoise" : "border-slate-200"
+                }`}
+              >
                 <button
                   type="button"
-                  onClick={() => toggle(key)}
+                  onClick={() => setOpen(isOpen ? null : n)}
                   aria-expanded={isOpen}
-                  className="flex justify-between items-center w-full text-left group"
+                  className="flex w-full items-center justify-between gap-3.5 px-6 py-5 text-left"
                 >
-                  <span className="font-bold text-white text-lg font-heading group-hover:text-[#C9A84C] transition-colors">
-                    {t(`q${key}` as const)}
+                  <span className="text-[15.5px] font-semibold text-ink">
+                    {t(`q${n}`)}
                   </span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-[#C9A84C] flex-shrink-0 ml-4 transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
+                  <span
+                    className={`flex h-[30px] w-[30px] shrink-0 items-center justify-center rounded-full transition-colors ${
+                      isOpen
+                        ? "bg-coral text-white"
+                        : "bg-turquoise-light text-turquoise-dark"
                     }`}
-                  />
+                  >
+                    {isOpen ? (
+                      <Minus className="h-4 w-4" />
+                    ) : (
+                      <Plus className="h-4 w-4" />
+                    )}
+                  </span>
                 </button>
-
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
-                      key={`answer-${key}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      transition={{ duration: 0.25, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <p className="text-slate-300 text-base leading-relaxed pt-3 font-sans">
-                        {t(`a${key}` as const)}
+                      <p className="px-6 pb-5 text-[14.5px] leading-[1.7] text-slate-600">
+                        {t(`a${n}`)}
                       </p>
                     </motion.div>
                   )}

@@ -1,126 +1,119 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useBooking } from "@/components/ui/BookingContext";
+import { ArrowRight } from "lucide-react";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 24 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, delay: i * 0.15, ease: "easeOut" as const },
+    transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" as const },
   }),
 };
 
-export default function HeroSection() {
-  const t = useTranslations("Hero");
-  const { openBooking } = useBooking();
+export default function Hero() {
+  const t = useTranslations("PlayaElAngel.hero");
 
-  const bullets = [t("bullet1"), t("bullet2"), t("bullet3")];
+  const quickfacts = [1, 2, 3, 4] as const;
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background image — fully visible */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/services/hero-home.jpg"
-          alt="WEN'S Professional Cleaning"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        {/* Left-side gradient so text stays readable without hiding the image */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
-        {/* Subtle top gradient for navbar contrast */}
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/30 to-transparent" />
-      </div>
+    <section
+      id="hero"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cover bg-center px-6 pb-20 pt-[120px] text-center text-white"
+      style={{
+        backgroundImage:
+          "linear-gradient(135deg, rgba(8,145,178,0.6), rgba(249,115,22,0.35)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop')",
+      }}
+    >
+      <div className="mx-auto max-w-[900px]">
+        <motion.div
+          custom={0}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="mb-6 inline-block rounded-full border border-white/30 bg-white/20 px-5 py-2 text-sm font-medium backdrop-blur-md"
+        >
+          {t("badge")}
+        </motion.div>
 
-      {/* Content — left aligned */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 py-32">
-        <div className="max-w-2xl">
-          {/* Logo */}
-          <motion.div
-            custom={0}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="mb-6"
+        <motion.h1
+          custom={1}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="mb-5 text-[clamp(2rem,6vw,4.2rem)] font-extrabold leading-[1.1] drop-shadow-[0_2px_20px_rgba(0,0,0,0.3)]"
+        >
+          {t("titleLead")}{" "}
+          <span className="font-pacifico text-sunshine font-normal">
+            {t("titleHighlight")}
+          </span>
+        </motion.h1>
+
+        <motion.p
+          custom={2}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="mb-3 text-[clamp(1.05rem,2.2vw,1.35rem)] font-medium opacity-95"
+        >
+          {t("sub")}
+        </motion.p>
+
+        <motion.p
+          custom={3}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="mx-auto mb-10 max-w-[720px] text-[clamp(0.95rem,1.8vw,1.1rem)] opacity-90"
+        >
+          {t("description")}
+        </motion.p>
+
+        <motion.div
+          custom={4}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="flex flex-wrap justify-center gap-4"
+        >
+          <a
+            href="#reservar"
+            className="inline-flex items-center gap-2.5 rounded-full bg-coral px-8 py-4 text-base font-semibold text-white shadow-coral transition-all hover:-translate-y-0.5 hover:bg-coral-dark hover:shadow-coral-lg"
           >
-
-          </motion.div>
-
-          {/* Main title */}
-          <motion.h1
-            custom={1}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6 drop-shadow-md"
+            {t("ctaPrimary")}
+            <ArrowRight className="h-4 w-4" />
+          </a>
+          <a
+            href="#alojamiento"
+            className="inline-flex items-center gap-2.5 rounded-full border-2 border-white/40 bg-white/15 px-8 py-4 text-base font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/25"
           >
-            {t("bgTitle")}
-          </motion.h1>
+            {t("ctaSecondary")}
+          </a>
+        </motion.div>
 
-          {/* Bullets */}
-          <motion.ul
-            custom={2}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="flex flex-col gap-3 mb-6"
-          >
-            {bullets.map((bullet, i) => (
-              <li key={i} className="flex items-center gap-3 text-white text-base md:text-lg font-medium drop-shadow-sm">
-                {bullet}
-              </li>
-            ))}
-          </motion.ul>
-
-          {/* Location */}
-          <motion.p
-            custom={3}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="text-lg md:text-xl text-white/90 font-semibold mb-4 drop-shadow-sm"
-          >
-            {t("location")}
-          </motion.p>
-
-          {/* Tagline */}
-          <motion.p
-            custom={4}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="text-base md:text-lg text-white/80 italic mb-8 drop-shadow-sm"
-          >
-            {t("tagline")}
-          </motion.p>
-
-          {/* CTA button */}
-          <motion.div
-            custom={5}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-          >
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                openBooking();
-              }}
-              className="inline-flex items-center gap-2 bg-primary hover:bg-navy-light text-white rounded-lg px-8 py-4 font-bold text-base transition-colors duration-200 shadow-lg"
+        <motion.div
+          custom={5}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="mx-auto mt-14 grid max-w-[720px] grid-cols-2 gap-3.5 sm:grid-cols-4"
+        >
+          {quickfacts.map((i) => (
+            <div
+              key={i}
+              className="rounded-2xl border border-white/20 bg-white/10 px-3.5 py-4 text-center backdrop-blur-lg"
             >
-              {t("cta")}
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </motion.div>
-        </div>
+              <span className="mb-1 block text-2xl font-extrabold leading-none text-sunshine">
+                {t(`qf${i}Value`)}
+              </span>
+              <span className="text-[13px] font-medium opacity-95">
+                {t(`qf${i}Label`)}
+              </span>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
