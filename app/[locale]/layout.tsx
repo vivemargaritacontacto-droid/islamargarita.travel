@@ -1,32 +1,36 @@
 import type { Metadata } from "next";
-import { Nunito, Nunito_Sans } from "next/font/google";
+import { Pacifico, Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/src/i18n/routing";
 import "./globals.css";
 
-const nunito = Nunito({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["700", "800"],
-  variable: "--font-nunito",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
+  display: "swap",
 });
 
-const nunitoSans = Nunito_Sans({
+const pacifico = Pacifico({
   subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-nunito-sans",
+  weight: ["400"],
+  variable: "--font-pacifico",
+  display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Isla Margarita Travel",
-  description:
-    "Alquiler de Apartamentos Vacacionales en Playa el Angel",
-  icons: {
-    icon: "/images/services/logo.png",
-    apple: "/images/services/logo.png",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("PlayaElAngel.meta");
+  return {
+    title: t("title"),
+    description: t("description"),
+    icons: {
+      icon: "/images/logo-icon.png",
+      apple: "/images/logo-icon.png",
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -50,7 +54,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${nunito.variable} ${nunitoSans.variable} font-sans antialiased`}
+        className={`${poppins.variable} ${pacifico.variable} font-poppins bg-white text-ink antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}

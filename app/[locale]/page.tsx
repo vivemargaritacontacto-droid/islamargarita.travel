@@ -1,52 +1,37 @@
-"use client";
-
-import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
-import ServiciosAlojamiento from "@/components/sections/ServiciosAlojamiento";
-import TrustedLogosSection from "@/components/sections/TrustedLogosSection";
-import TrustedBySection from "@/components/sections/TrustedBySection";
-// import PricingSection from "@/components/sections/PricingSection";
-// import WhyChooseSection from "@/components/sections/WhyChooseSection";
-import FounderSection from "@/components/sections/FounderSection";
-// import CTASection from "@/components/sections/CTASection";
+import AlojamientoSection from "@/components/sections/AlojamientoSection";
+import FotosSection from "@/components/sections/FotosSection";
+import ServiciosSection from "@/components/sections/ServiciosSection";
+import WhyUsSection from "@/components/sections/WhyUsSection";
+import TarifasSection from "@/components/sections/TarifasSection";
+import LocationSection from "@/components/sections/LocationSection";
+import ReviewsSection from "@/components/sections/ReviewsSection";
+import ReservarSection from "@/components/sections/ReservarSection";
 import FAQSection from "@/components/sections/FAQSection";
-import WhyWensSection from "@/components/sections/WhyWensSection";
-import WorkWithUsSection from "@/components/sections/WorkWithUsSection";
-import FloatingActionButton from "@/components/ui/FloatingActionButton";
-import ChatbotModal from "@/components/ui/ChatbotModal";
-import { BookingProvider } from "@/components/ui/BookingContext";
-import BookingModal from "@/components/ui/BookingModal";
+import CTAFinalSection from "@/components/sections/CTAFinalSection";
+import WhatsappFloat from "@/components/ui/WhatsappFloat";
 
 export default function Home() {
-  const [chatOpen, setChatOpen] = useState(false);
-
   return (
-    <BookingProvider>
+    <>
       <Navbar />
       <main>
         <HeroSection />
-        <ServiciosAlojamiento />
-        <TrustedLogosSection />
-        <TrustedBySection />
-        {/* <PricingSection /> */}
-        {/* <WhyChooseSection /> */}
-        <FounderSection />
-        <WhyWensSection />
+        <AlojamientoSection />
+        <FotosSection />
+        <ServiciosSection />
+        <WhyUsSection />
+        <TarifasSection />
+        <LocationSection />
+        <ReviewsSection />
+        <ReservarSection />
         <FAQSection />
-        {/* <CTASection /> */}
-        <WorkWithUsSection />
+        <CTAFinalSection />
       </main>
       <Footer />
-
-      <FloatingActionButton
-        whatsappNumber="1234567890"
-        whatsappMessage="Hello! I'd like to book a cleaning service with WEN'S."
-        onChatbotOpen={() => setChatOpen(true)}
-      />
-      <ChatbotModal isOpen={chatOpen} onClose={() => setChatOpen(false)} />
-      <BookingModal />
-    </BookingProvider>
+      <WhatsappFloat />
+    </>
   );
 }

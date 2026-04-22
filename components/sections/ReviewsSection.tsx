@@ -2,78 +2,86 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import StarRating from "@/components/ui/StarRating";
-import BoltPattern from "@/components/ui/BoltPattern";
+import { Star } from "lucide-react";
 
-export default function ReviewsSection() {
-  const t = useTranslations("Reviews");
-
-  const reviews = [
-    {
-      id: 1, score: 5,
-      date: t("review1Date"), title: t("review1Title"),
-      text: t("review1Text"), author: t("review1Author"),
-    },
-    {
-      id: 2, score: 5,
-      date: t("review2Date"), title: t("review2Title"),
-      text: t("review2Text"), author: t("review2Author"),
-    },
-    {
-      id: 3, score: 5,
-      date: t("review3Date"), title: t("review3Title"),
-      text: t("review3Text"), author: t("review3Author"),
-    },
-  ];
+export default function Reviews() {
+  const t = useTranslations("PlayaElAngel.reviews");
 
   return (
-    <section className="py-20 relative overflow-hidden bg-[#3D6B5A]">
-      <BoltPattern />
+    <section id="opiniones" className="bg-white px-6 py-20">
+      <div className="mx-auto max-w-[1200px]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto mb-12 max-w-2xl text-center"
+        >
+          <div className="mb-3 text-[13px] font-semibold uppercase tracking-[2px] text-coral">
+            {t("label")}
+          </div>
+          <h2 className="mb-4 text-[clamp(1.8rem,4vw,2.6rem)] font-bold leading-[1.15] text-ink">
+            {t("titleLead")}{" "}
+            <span className="font-pacifico font-normal text-turquoise">
+              {t("titleHighlight")}
+            </span>
+          </h2>
+          <p className="text-[17px] text-slate-600">{t("sub")}</p>
+        </motion.div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col justify-center gap-3.5 rounded-3xl bg-gradient-to-br from-turquoise to-turquoise-dark p-10 text-white"
           >
-            {reviews.map((r) => (
-              <motion.div
-                key={r.id}
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-2xl p-6"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <StarRating score={r.score} />
-                  <span className="text-xs text-gray-400">{r.date}</span>
-                </div>
-                <h4 className="font-bold text-brand-dark mt-2">{r.title}</h4>
-                <p className="text-sm text-brand-muted mt-1 line-clamp-4">{r.text}</p>
-                <p className="text-xs text-gray-400 mt-3">{r.author}</p>
-              </motion.div>
-            ))}
+            <div className="flex gap-1 text-sunshine">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-6 w-6 fill-current" />
+              ))}
+            </div>
+            <h3 className="text-[26px] font-bold leading-tight">
+              {t("ctaHeading")}
+            </h3>
+            <p className="text-[15px] opacity-95">{t("ctaText")}</p>
+            <a
+              href="https://g.page/r/CfXQlSNpnF2SEAE/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex w-fit items-center gap-2.5 rounded-full bg-white px-6 py-3.5 text-[15px] font-semibold text-turquoise-dark transition-transform hover:-translate-y-0.5"
+            >
+              {t("ctaLink")}
+            </a>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center text-white shrink-0"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="relative rounded-3xl border border-slate-200 bg-cream px-8 py-9"
           >
-            <div className="flex justify-center gap-2 text-brand-yellow text-5xl mb-4">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <span key={i}>&#9733;</span>
-              ))}
+            <span
+              aria-hidden
+              className="absolute left-6 top-7 font-pacifico text-[80px] leading-[0.6] text-coral opacity-25"
+            >
+              &ldquo;
+            </span>
+            <div className="relative z-10">
+              <div className="mb-2.5 flex gap-1 text-coral">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-current" />
+                ))}
+              </div>
+              <p className="mb-4 text-base italic leading-[1.65] text-ink">
+                {t("quote")}
+              </p>
+              <p className="text-[14.5px] font-semibold text-turquoise-dark">
+                {t("quoteAuthor")}
+              </p>
             </div>
-            <div className="text-7xl lg:text-[96px] font-bold leading-none">4.6 / 5</div>
-            <p className="text-sm mt-4 text-brand-text-light">{t("verifiedReviews")}</p>
           </motion.div>
         </div>
       </div>

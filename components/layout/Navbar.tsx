@@ -1,135 +1,104 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-
 import LanguageToggle from "@/src/components/language-toggle";
 
-const SOCIAL_LINKS = [
-  {
-    name: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=61570755117625",
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-      </svg>
-    ),
-  },
-];
+const SECTIONS = [
+  { id: "alojamiento", key: "alojamiento" },
+  { id: "servicios", key: "servicios" },
+  { id: "ubicacion", key: "ubicacion" },
+  { id: "tarifas", key: "tarifas" },
+  { id: "opiniones", key: "opiniones" },
+  { id: "reservar", key: "reservar" },
+  { id: "faq", key: "faq" },
+] as const;
 
 export default function Navbar() {
-  const t = useTranslations("Navbar");
+  const t = useTranslations("PlayaElAngel.nav");
+  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const navLinks = [
-    { label: t("home"), href: "#hero" },
-    { label: t("about"), href: "#about" },
-    { label: t("service"), href: "#services" },
-    { label: t("contact"), href: "#contact" },
-  ];
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", handler);
-    return () => window.removeEventListener("scroll", handler);
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white border-b-2 border-[#1B396A]/20 transition-shadow duration-300 ${
-        scrolled ? "shadow-md" : ""
+      className={`fixed inset-x-0 top-0 z-50 backdrop-blur-md transition-shadow ${
+        scrolled
+          ? "bg-white/95 shadow-tropical-sm"
+          : "bg-white/80"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-        {/* Logo */}
-        <a
-          href="#hero"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          className="flex items-center gap-2 cursor-pointer"
-        >
-          <Image src="/images/logo-margarita-travel.png" alt="Margarita Travel" width={140} height={82} />
+      <nav className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-6 py-3.5">
+        <a href="#hero" className="font-pacifico text-[22px] text-turquoise whitespace-nowrap">
+          {t("brandName")}
+          <span className="text-coral">{t("brandAccent")}</span>
         </a>
 
-        {/* Center nav links + social icons */}
-        <div className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
+        <div className="hidden items-center gap-6 text-[14.5px] font-medium lg:flex">
+          {SECTIONS.map((s) => (
             <a
-              key={link.href}
-              href={link.href}
-              onClick={link.href === "#hero" ? (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); } : undefined}
-              className="text-[#1B396A] font-semibold hover:text-[#C9A84C] transition-colors duration-200"
+              key={s.id}
+              href={`#${s.id}`}
+              className="text-ink/80 transition-colors hover:text-turquoise"
             >
-              {link.label}
-            </a>
-          ))}
-          {/* Divider */}
-          <span className="w-px h-5 bg-[#1B396A]/20" />
-          {/* Social icons */}
-          {SOCIAL_LINKS.map((s) => (
-            <a
-              key={s.name}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={s.name}
-              className="text-[#1B396A] hover:text-[#C9A84C] transition-colors duration-200"
-            >
-              {s.icon}
+              {t(s.key)}
             </a>
           ))}
         </div>
 
-        {/* Right: Language Toggle */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden items-center gap-3 lg:flex">
           <LanguageToggle />
+          <a
+            href="#reservar"
+            className="whitespace-nowrap rounded-full bg-gradient-to-br from-coral to-coral-dark px-[18px] py-2.5 text-[13.5px] font-semibold text-white shadow-coral transition-transform hover:-translate-y-0.5"
+          >
+            {t("reservarCta")}
+          </a>
         </div>
 
-        {/* Mobile hamburger */}
         <button
-          className="md:hidden text-[#1B396A]"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={t("toggleMenu")}
+          className="flex flex-col gap-1 p-1.5 lg:hidden"
+          onClick={() => setOpen((v) => !v)}
+          aria-label={t("menuLabel")}
         >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {open ? (
+            <X className="h-6 w-6 text-ink" />
+          ) : (
+            <Menu className="h-6 w-6 text-ink" />
+          )}
         </button>
       </nav>
 
-      {/* Mobile drawer */}
-      {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-[#1B396A]/10 px-6 py-4 space-y-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={link.href === "#hero" ? (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); setMobileOpen(false); } : () => setMobileOpen(false)}
-              className="block text-[#1B396A] font-semibold hover:text-[#C9A84C] transition-colors duration-200"
-            >
-              {link.label}
-            </a>
-          ))}
-          {/* Social icons mobile */}
-          <div className="flex items-center gap-4 pt-2">
-            {SOCIAL_LINKS.map((s) => (
+      {open && (
+        <div className="border-t border-ink/5 bg-white px-6 py-5 shadow-tropical-md lg:hidden">
+          <div className="flex flex-col gap-4 text-[15px] font-medium">
+            {SECTIONS.map((s) => (
               <a
-                key={s.name}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={s.name}
-                className="text-[#1B396A] hover:text-[#C9A84C] transition-colors duration-200"
+                key={s.id}
+                href={`#${s.id}`}
+                onClick={() => setOpen(false)}
+                className="text-ink/80 hover:text-turquoise"
               >
-                {s.icon}
+                {t(s.key)}
               </a>
             ))}
-          </div>
-          <div className="pt-2">
-            <LanguageToggle />
+            <a
+              href="#reservar"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-br from-coral to-coral-dark px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-coral"
+            >
+              {t("reservarCta")}
+            </a>
+            <div className="pt-2">
+              <LanguageToggle />
+            </div>
           </div>
         </div>
       )}
