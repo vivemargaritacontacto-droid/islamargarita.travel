@@ -519,7 +519,7 @@
       "description": "Premium-Ferienwohnungen und -Townhouses auf Margarita. Pool, Klimaanlage, Glasfaser-WLAN und Strand in wenigen Schritten. Einfache und sichere Buchung. Playa El Ángel, Pampatar und mehr."
     },
     "nav": {
-      "alojamiento": "Unterkunft",
+      "alojamiento": "Mietobjekte",
       "servicios": "Ausstattung",
       "ubicacion": "Lage",
       "tarifas": "Preise",
@@ -707,6 +707,7 @@
       "placeholderEmail": "du@beispiel.com",
       "labelArrival": "Anreisedatum",
       "labelDeparture": "Abreisedatum",
+      "labelNights": "Anzahl Nächte",
       "labelGuests": "Anzahl Gäste",
       "guestsPlaceholder": "Auswählen",
       "guestsOption1": "1 Person",
@@ -734,6 +735,7 @@
       "waLabelEmail": "📧 E-Mail",
       "waLabelArrival": "📅 Anreise",
       "waLabelDeparture": "📅 Abreise",
+      "waLabelNights": "🌙 Nächte",
       "waLabelGuests": "👥 Gäste",
       "waLabelPayment": "💳 Zahlung",
       "waLabelMessage": "📝 Nachricht",

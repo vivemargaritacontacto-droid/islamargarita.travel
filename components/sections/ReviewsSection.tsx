@@ -47,7 +47,7 @@ export default function Reviews() {
             </h3>
             <p className="text-[15px] opacity-95">{t("ctaText")}</p>
             <a
-              href="https://g.page/r/CfXQlSNpnF2SEAE/review"
+              href="https://g.page/r/CSFqdle2A2lBEAE/review"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 inline-flex w-fit items-center gap-2.5 rounded-full bg-white px-6 py-3.5 text-[15px] font-semibold text-turquoise-dark transition-transform hover:-translate-y-0.5"

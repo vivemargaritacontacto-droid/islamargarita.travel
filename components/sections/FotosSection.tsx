@@ -7,10 +7,10 @@ import { useTranslations } from "next-intl";
 import Lightbox from "@/components/ui/Lightbox";
 
 const PHOTOS = [
-  { key: "alt1", src: "/images/services/patio-piscina.jpg", tall: true },
+  { key: "alt1", src: "/images/services/pool-area.jpg", tall: true },
   { key: "alt2", src: "/images/services/habitacion-principal.jpg" },
   { key: "alt3", src: "/images/services/sala-estar-tv.jpg" },
-  { key: "alt4", src: "/images/services/pool-area.jpg" },
+  { key: "alt4", src: "/images/services/patio-piscina.jpg"},
   { key: "alt5", src: "/images/services/habitacion-secundaria.jpg" },
   { key: "alt6", src: "/images/services/cocina-lavadora.jpg" },
   { key: "alt7", src: "/images/services/sofa-cama.jpg" },

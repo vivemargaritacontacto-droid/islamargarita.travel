@@ -519,7 +519,7 @@
       "description": "Premium vacation apartments and townhouses in Margarita. Pool, air conditioning, fiber WiFi, and beach steps away. Easy and safe booking. Playa El Ángel, Pampatar and more."
     },
     "nav": {
-      "alojamiento": "Stay",
+      "alojamiento": "Rentals",
       "servicios": "Amenities",
       "ubicacion": "Location",
       "tarifas": "Rates",
@@ -707,6 +707,7 @@
       "placeholderEmail": "you@example.com",
       "labelArrival": "Arrival date",
       "labelDeparture": "Departure date",
+      "labelNights": "Number of nights",
       "labelGuests": "# of guests",
       "guestsPlaceholder": "Select",
       "guestsOption1": "1 person",
@@ -734,6 +735,7 @@
       "waLabelEmail": "📧 Email",
       "waLabelArrival": "📅 Arrival",
       "waLabelDeparture": "📅 Departure",
+      "waLabelNights": "🌙 Nights",
       "waLabelGuests": "👥 Guests",
       "waLabelPayment": "💳 Payment",
       "waLabelMessage": "📝 Message",
