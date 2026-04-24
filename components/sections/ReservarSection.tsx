@@ -18,6 +18,7 @@ export default function Reservar() {
     email: "",
     arrival: "",
     departure: "",
+    nights: "",
     guests: "",
     payment: "",
     message: "",
@@ -38,6 +39,7 @@ export default function Reservar() {
       `${t("waLabelEmail")}: ${form.email}`,
       `${t("waLabelArrival")}: ${form.arrival}`,
       `${t("waLabelDeparture")}: ${form.departure}`,
+      `${t("waLabelNights")}: ${form.nights}`,
       `${t("waLabelGuests")}: ${form.guests}`,
     ];
     if (form.payment) lines.push(`${t("waLabelPayment")}: ${form.payment}`);
@@ -213,6 +215,22 @@ export default function Reservar() {
                   className={inputClass}
                 />
               </div>
+            </div>
+
+            <div className="mb-4">
+              <label htmlFor="pa-nights" className={labelClass}>
+                {t("labelNights")}
+              </label>
+              <input
+                id="pa-nights"
+                type="number"
+                min="3"
+                required
+                placeholder="3"
+                value={form.nights}
+                onChange={(e) => update("nights", e.target.value)}
+                className={inputClass}
+              />
             </div>
 
             <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">

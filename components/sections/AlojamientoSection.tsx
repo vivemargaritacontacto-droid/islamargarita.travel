@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { BedDouble, Sofa, Bath, UtensilsCrossed, Car, Waves } from "lucide-react";
@@ -48,13 +49,15 @@ export default function Alojamiento() {
           transition={{ duration: 0.6 }}
           className="grid grid-cols-1 overflow-hidden rounded-[28px] bg-white shadow-tropical-lg lg:grid-cols-2"
         >
-          <div
-            className="relative h-80 bg-cover bg-center lg:h-auto lg:min-h-[540px]"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=900&auto=format&fit=crop')",
-            }}
-          >
+          <div className="relative h-80 lg:h-auto lg:min-h-[540px]">
+            <Image
+              src="/images/services/residencia.jpeg"
+              alt={t("cardTitle")}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+            />
             <div className="absolute left-5 top-5 rounded-full bg-coral px-4 py-2 text-[13px] font-semibold text-white shadow-coral">
               {t("tag")}
             </div>
@@ -74,13 +77,30 @@ export default function Alojamiento() {
               </span>
             </div>
 
-            <div className="mb-6 flex items-baseline gap-2 border-b border-dashed border-slate-200 pb-5">
-              <span className="text-[2.3rem] font-extrabold text-turquoise">
-                {t("price")}
-              </span>
-              <span className="text-[15px] text-slate-600">
-                {t("priceUnit")}
-              </span>
+            <div className="mb-6 grid grid-cols-2 gap-3 border-b border-dashed border-slate-200 pb-5">
+              <div className="rounded-2xl bg-sky-50 px-4 py-3">
+                <div className="mb-0.5 text-[11px] font-semibold uppercase tracking-widest text-sky-500">
+                  {t("priceLowLabel")}
+                </div>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-[1.9rem] font-extrabold text-sky-500">
+                    {t("priceLow")}
+                  </span>
+                  <span className="text-[13px] text-slate-500">{t("priceLowUnit")}</span>
+                </div>
+              </div>
+              <div className="rounded-2xl bg-coral/10 px-4 py-3">
+                <div className="mb-0.5 text-[11px] font-semibold uppercase tracking-widest text-coral">
+                  {t("priceHighLabel")}
+                </div>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-[1.9rem] font-extrabold text-coral">
+                    {t("priceHigh")}
+                  </span>
+                  <span className="text-[13px] text-slate-500">{t("priceHighUnit")}</span>
+                </div>
+              </div>
+              <p className="col-span-2 text-[13px] text-slate-500">{t("priceExtra")}</p>
             </div>
 
             <div className="mb-3.5 text-[15px] font-bold text-ink">
