@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { Phone, Mail, Facebook, Instagram } from "lucide-react";
 
 const NAV_KEYS = [
   { id: "alojamiento", key: "alojamiento" },
@@ -42,17 +43,19 @@ export default function Footer() {
                 href="https://wa.me/584249077879"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-sunshine"
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-sunshine"
               >
+                <Phone className="h-4 w-4 shrink-0" />
                 {t("contactPhone")}
               </a>
             </li>
             <li>
               <a
                 href="mailto:islamargarita.reserva@gmail.com"
-                className="transition-colors hover:text-sunshine"
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-sunshine"
               >
-                {t("contactEmail")}
+                <Mail className="h-4 w-4 shrink-0" />
+                <span className="truncate">{t("contactEmail")}</span>
               </a>
             </li>
             <li>
@@ -60,9 +63,21 @@ export default function Footer() {
                 href="https://www.facebook.com/profile.php?id=61570755117625"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-sunshine"
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-sunshine"
               >
+                <Facebook className="h-4 w-4" />
                 {t("contactFacebook")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/islamargarita.travel/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-sunshine"
+              >
+                <Instagram className="h-4 w-4" />
+                {t("contactInstagram")}
               </a>
             </li>
           </ul>

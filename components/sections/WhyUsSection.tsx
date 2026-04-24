@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Check } from "lucide-react";
 
-const REASONS = [1, 2, 3] as const;
+const CARDS = [
+  { num: 1, icon: "📍" },
+  { num: 2, icon: "🛏️" },
+  { num: 3, icon: "🤝" },
+] as const;
 
 export default function WhyUs() {
   const t = useTranslations("PlayaElAngel.whyUs");
@@ -31,24 +36,37 @@ export default function WhyUs() {
         </motion.div>
 
         <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-          {REASONS.map((num, index) => (
+          {CARDS.map(({ num, icon }, index) => (
             <motion.div
               key={num}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative rounded-3xl border-2 border-slate-200 bg-white px-7 py-9 transition-all hover:-translate-y-1 hover:border-turquoise hover:shadow-tropical-md"
+              className="group relative flex flex-col rounded-3xl border-2 border-slate-200 bg-white px-7 py-8 transition-all hover:-translate-y-1 hover:border-turquoise hover:shadow-tropical-md"
             >
-              <div className="absolute -top-5 left-7 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-coral to-sunshine text-xl font-extrabold text-white shadow-coral">
+              <div className="absolute -top-5 left-7 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-coral to-sunshine text-base font-extrabold text-white shadow-coral">
                 {num}
               </div>
-              <h4 className="mb-2.5 mt-3.5 text-[19px] font-bold text-ink">
+
+              <div className="mb-4 mt-3 text-4xl leading-none">{icon}</div>
+
+              <h4 className="mb-2.5 text-[19px] font-bold leading-[1.25] text-ink">
                 {t(`r${num}Title`)}
               </h4>
-              <p className="text-[14.5px] leading-[1.65] text-slate-600">
+
+              <p className="flex-1 text-[14.5px] leading-[1.65] text-slate-600">
                 {t(`r${num}Desc`)}
               </p>
+
+              <div className="mt-5 flex items-center gap-2 border-t border-slate-100 pt-4">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-turquoise/15 text-turquoise-dark">
+                  <Check className="h-3 w-3 stroke-[2.5]" />
+                </span>
+                <span className="text-[13px] font-medium text-turquoise-dark">
+                  {t(`r${num}Check`)}
+                </span>
+              </div>
             </motion.div>
           ))}
         </div>

@@ -1,16 +1,27 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { motion } from "framer-motion";
+import { FormEvent, useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Phone, Mail, Facebook, Send } from "lucide-react";
+// eslint-disable-next-line @typescript-eslint/no-deprecated
+import { Phone, Mail, Facebook, Send, Moon } from "lucide-react";
 
 const WHATSAPP_NUMBER = "584249077879";
 const GUEST_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8] as const;
 const PAYMENT_OPTIONS = [1, 2, 3, 4, 5] as const;
 
+function calcNights(arrival: string, departure: string): number | null {
+  if (!arrival || !departure) return null;
+  const diff = new Date(departure).getTime() - new Date(arrival).getTime();
+  const n = Math.round(diff / 86_400_000);
+  return n >= 1 ? n : null;
+}
+
+
 export default function Reservar() {
   const t = useTranslations("PlayaElAngel.reservar");
+
+  const today = new Date().toISOString().split("T")[0];
 
   const [form, setForm] = useState({
     name: "",
@@ -18,43 +29,54 @@ export default function Reservar() {
     email: "",
     arrival: "",
     departure: "",
-    nights: "",
     guests: "",
     payment: "",
     message: "",
   });
 
   function update<K extends keyof typeof form>(key: K, value: string) {
-    setForm((prev) => ({ ...prev, [key]: value }));
+    setForm((prev) => {
+      const next = { ...prev, [key]: value };
+      if (key === "arrival" && prev.departure && value >= prev.departure)
+        next.departure = "";
+      return next;
+    });
   }
+
+  const nights = useMemo(
+    () => calcNights(form.arrival, form.departure),
+    [form.arrival, form.departure]
+  );
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
     const lines = [
       t("waHeading"),
       "",
       `${t("waLabelName")}: ${form.name}`,
       `${t("waLabelPhone")}: ${form.phone}`,
-      `${t("waLabelEmail")}: ${form.email}`,
+      form.email ? `${t("waLabelEmail")}: ${form.email}` : "",
       `${t("waLabelArrival")}: ${form.arrival}`,
       `${t("waLabelDeparture")}: ${form.departure}`,
-      `${t("waLabelNights")}: ${form.nights}`,
+      nights ? `${t("waLabelNights")}: ${nights}` : "",
       `${t("waLabelGuests")}: ${form.guests}`,
-    ];
+    ].filter(Boolean);
     if (form.payment) lines.push(`${t("waLabelPayment")}: ${form.payment}`);
     if (form.message) lines.push(`${t("waLabelMessage")}: ${form.message}`);
     lines.push("", t("waClosing"));
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
-    window.open(url, "_blank", "noopener");
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`,
+      "_blank",
+      "noopener"
+    );
   }
 
   const inputClass =
-    "w-full rounded-xl border-[1.5px] border-slate-200 bg-white px-3.5 py-3 text-[14.5px] text-ink outline-none transition focus:border-turquoise focus:ring-[3px] focus:ring-turquoise/15";
+    "w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-[13.5px] text-ink outline-none transition focus:border-turquoise focus:ring-2 focus:ring-turquoise/15";
 
   const labelClass =
-    "mb-1.5 block text-[13px] font-semibold tracking-[0.3px] text-ink";
+    "mb-1 block text-[11.5px] font-semibold uppercase tracking-[0.5px] text-slate-400";
 
   return (
     <section
@@ -82,6 +104,7 @@ export default function Reservar() {
         </motion.div>
 
         <div className="grid items-start gap-9 lg:grid-cols-[0.8fr_1.2fr]">
+          {/* Sidebar */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -89,60 +112,64 @@ export default function Reservar() {
             transition={{ duration: 0.5 }}
             className="pt-2"
           >
-            <h3 className="mb-3.5 text-[22px] font-bold text-ink">
+            <h3 className="mb-3 text-[22px] font-bold text-ink">
               {t("sideHeading")}
             </h3>
             <p className="mb-4 text-[15px] text-slate-600">{t("sideText")}</p>
 
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-2.5 flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3.5 py-3 text-[14.5px] transition-colors hover:border-turquoise"
-            >
-              <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[10px] bg-turquoise-light text-turquoise-dark">
-                <Phone className="h-4 w-4" />
-              </span>
-              <span>
-                <strong className="block">{t("contactPhone")}</strong>
-                <span className="text-[12.5px] text-slate-500">
-                  {t("contactPhoneCaption")}
+            {[
+              {
+                href: `https://wa.me/${WHATSAPP_NUMBER}`,
+                icon: <Phone className="h-4 w-4" />,
+                label: t("contactPhone"),
+                sub: t("contactPhoneCaption"),
+                external: true,
+              },
+              {
+                href: `mailto:${t("contactEmail")}`,
+                icon: <Mail className="h-4 w-4" />,
+                label: t("contactEmail"),
+                external: false,
+              },
+              {
+                href: "https://www.facebook.com/profile.php?id=61570755117625",
+                icon: <Facebook className="h-4 w-4" />,
+                label: t("contactFacebook"),
+                external: true,
+              },
+            ].map(({ href, icon, label, sub, external }) => (
+              <a
+                key={href}
+                href={href}
+                {...(external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                className="mb-2.5 flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3.5 py-3 text-[14px] transition-colors hover:border-turquoise"
+              >
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-turquoise-light text-turquoise-dark">
+                  {icon}
                 </span>
-              </span>
-            </a>
-
-            <a
-              href={`mailto:${t("contactEmail")}`}
-              className="mb-2.5 flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3.5 py-3 text-[14.5px] transition-colors hover:border-turquoise"
-            >
-              <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[10px] bg-turquoise-light text-turquoise-dark">
-                <Mail className="h-4 w-4" />
-              </span>
-              <strong className="text-[13.5px]">{t("contactEmail")}</strong>
-            </a>
-
-            <a
-              href="https://www.facebook.com/profile.php?id=61570755117625"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-2.5 flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3.5 py-3 text-[14.5px] transition-colors hover:border-turquoise"
-            >
-              <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[10px] bg-turquoise-light text-turquoise-dark">
-                <Facebook className="h-4 w-4" />
-              </span>
-              <strong>{t("contactFacebook")}</strong>
-            </a>
+                <span className="min-w-0">
+                  <strong className="block truncate">{label}</strong>
+                  {sub && (
+                    <span className="text-[12px] text-slate-500">{sub}</span>
+                  )}
+                </span>
+              </a>
+            ))}
           </motion.div>
 
+          {/* Form */}
           <motion.form
             onSubmit={onSubmit}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="rounded-[28px] border border-slate-200 bg-white px-8 py-9 shadow-tropical-lg"
+            className="rounded-[24px] border border-slate-200 bg-white px-6 py-7 shadow-tropical-lg"
           >
-            <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {/* Row 1: Name + Phone */}
+            <div className="mb-3 grid grid-cols-2 gap-3">
               <div>
                 <label htmlFor="pa-name" className={labelClass}>
                   {t("labelName")}
@@ -173,22 +200,8 @@ export default function Reservar() {
               </div>
             </div>
 
-            <div className="mb-4">
-              <label htmlFor="pa-email" className={labelClass}>
-                {t("labelEmail")}
-              </label>
-              <input
-                id="pa-email"
-                type="email"
-                required
-                placeholder={t("placeholderEmail")}
-                value={form.email}
-                onChange={(e) => update("email", e.target.value)}
-                className={inputClass}
-              />
-            </div>
-
-            <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {/* Row 2: Arrival + Departure */}
+            <div className="mb-1 grid grid-cols-2 gap-3">
               <div>
                 <label htmlFor="pa-arrival" className={labelClass}>
                   {t("labelArrival")}
@@ -197,6 +210,7 @@ export default function Reservar() {
                   id="pa-arrival"
                   type="date"
                   required
+                  min={today}
                   value={form.arrival}
                   onChange={(e) => update("arrival", e.target.value)}
                   className={inputClass}
@@ -210,6 +224,7 @@ export default function Reservar() {
                   id="pa-departure"
                   type="date"
                   required
+                  min={form.arrival || today}
                   value={form.departure}
                   onChange={(e) => update("departure", e.target.value)}
                   className={inputClass}
@@ -217,23 +232,33 @@ export default function Reservar() {
               </div>
             </div>
 
-            <div className="mb-4">
-              <label htmlFor="pa-nights" className={labelClass}>
-                {t("labelNights")}
-              </label>
-              <input
-                id="pa-nights"
-                type="number"
-                min="3"
-                required
-                placeholder="3"
-                value={form.nights}
-                onChange={(e) => update("nights", e.target.value)}
-                className={inputClass}
-              />
-            </div>
+            {/* Dynamic nights badge */}
+            <AnimatePresence>
+              {nights !== null && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+                  animate={{ opacity: 1, height: "auto", marginBottom: 12 }}
+                  exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+                  transition={{ duration: 0.25 }}
+                  className="overflow-hidden"
+                >
+                  <div className="flex items-center gap-2.5 rounded-xl bg-turquoise/10 px-3.5 py-2">
+                    <Moon className="h-3.5 w-3.5 text-turquoise-dark" />
+                    <span className="text-[13px] font-semibold text-turquoise-dark">
+                      {nights} {nights === 1 ? "noche" : "noches"}
+                    </span>
+                   
+                      <span className={`ml-auto rounded-full px-2 py-0.5 text-[11px] font-semibold ${nights < 3 ? "bg-coral/10 text-coral" : "bg-turquoise/10 text-turquoise-dark"}`}>
+                      {nights < 3 ? "Mín. 3 noches" : "Es hora de disfrutar"}
+                      </span>
+                    
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
-            <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {/* Row 3: Guests + Payment */}
+            <div className="mb-3 grid grid-cols-2 gap-3">
               <div>
                 <label htmlFor="pa-guests" className={labelClass}>
                   {t("labelGuests")}
@@ -273,6 +298,23 @@ export default function Reservar() {
               </div>
             </div>
 
+            {/* Row 4: Email (optional) */}
+            <div className="mb-3">
+              <label htmlFor="pa-email" className={labelClass}>
+                {t("labelEmail")}{" "}
+                <span className="font-normal text-slate-400">(opcional)</span>
+              </label>
+              <input
+                id="pa-email"
+                type="email"
+                placeholder={t("placeholderEmail")}
+                value={form.email}
+                onChange={(e) => update("email", e.target.value)}
+                className={inputClass}
+              />
+            </div>
+
+            {/* Row 5: Message (optional) */}
             <div className="mb-2">
               <label htmlFor="pa-message" className={labelClass}>
                 {t("labelMessage")}
@@ -282,18 +324,18 @@ export default function Reservar() {
                 placeholder={t("placeholderMessage")}
                 value={form.message}
                 onChange={(e) => update("message", e.target.value)}
-                className={`${inputClass} min-h-[90px] resize-y`}
+                className={`${inputClass} min-h-[60px] resize-none`}
               />
             </div>
 
             <button
               type="submit"
-              className="mt-2 inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-gradient-to-br from-coral to-coral-dark px-6 py-4 text-base font-bold text-white shadow-coral transition-transform hover:-translate-y-0.5"
+              className="mt-2 inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-gradient-to-br from-coral to-coral-dark px-6 py-3.5 text-base font-bold text-white shadow-coral transition-transform hover:-translate-y-0.5"
             >
               <Send className="h-4 w-4" />
               {t("submit")}
             </button>
-            <p className="mt-3.5 text-center text-[12.5px] text-slate-500">
+            <p className="mt-3 text-center text-[12px] text-slate-400">
               {t("note")}
             </p>
           </motion.form>

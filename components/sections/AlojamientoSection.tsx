@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { BedDouble, Sofa, Bath, UtensilsCrossed, Car, Waves } from "lucide-react";
+import { BedDouble, Sofa, Bath, UtensilsCrossed, Car, Flame } from "lucide-react";
 
 const FEATURES = [
   { key: "feat1", Icon: BedDouble },
@@ -11,7 +11,7 @@ const FEATURES = [
   { key: "feat3", Icon: Bath },
   { key: "feat4", Icon: UtensilsCrossed },
   { key: "feat5", Icon: Car },
-  { key: "feat6", Icon: Waves },
+  { key: "feat6", Icon: Flame },
 ] as const;
 
 export default function Alojamiento() {
@@ -49,7 +49,7 @@ export default function Alojamiento() {
           transition={{ duration: 0.6 }}
           className="grid grid-cols-1 overflow-hidden rounded-[28px] bg-white shadow-tropical-lg lg:grid-cols-2"
         >
-          <div className="relative h-80 lg:h-auto lg:min-h-[540px]">
+          <div className="relative h-80 lg:h-auto lg:min-h-[460px]">
             <Image
               src="/images/services/residencia.jpeg"
               alt={t("cardTitle")}
@@ -72,12 +72,10 @@ export default function Alojamiento() {
               <span className="before:font-extrabold before:text-turquoise before:content-['•_']">
                 {t("metaPeople")}
               </span>
-              <span className="before:font-extrabold before:text-turquoise before:content-['•_']">
-                {t("metaPool")}
-              </span>
+              {/* metaPool hidden */}
             </div>
 
-            <div className="mb-6 grid grid-cols-2 gap-3 border-b border-dashed border-slate-200 pb-5">
+            {/* <div className="mb-6 grid grid-cols-2 gap-3 border-b border-dashed border-slate-200 pb-5">
               <div className="rounded-2xl bg-sky-50 px-4 py-3">
                 <div className="mb-0.5 text-[11px] font-semibold uppercase tracking-widest text-sky-500">
                   {t("priceLowLabel")}
@@ -101,7 +99,7 @@ export default function Alojamiento() {
                 </div>
               </div>
               <p className="col-span-2 text-[13px] text-slate-500">{t("priceExtra")}</p>
-            </div>
+            </div> */}
 
             <div className="mb-3.5 text-[15px] font-bold text-ink">
               {t("distribucionTitle")}

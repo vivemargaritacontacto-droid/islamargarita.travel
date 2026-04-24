@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Footprints, Car, type LucideIcon } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -11,6 +11,13 @@ const fadeUp = {
     y: 0,
     transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" as const },
   }),
+};
+
+const quickfactIcons: Record<number, LucideIcon> = {
+  1: Footprints,
+  2: Footprints,
+  3: Car,
+  4: Car,
 };
 
 export default function Hero() {
@@ -100,19 +107,23 @@ export default function Hero() {
           variants={fadeUp}
           className="mx-auto mt-14 grid max-w-[720px] grid-cols-2 gap-3.5 sm:grid-cols-4"
         >
-          {quickfacts.map((i) => (
-            <div
-              key={i}
-              className="rounded-2xl border border-white/20 bg-white/10 px-3.5 py-4 text-center backdrop-blur-lg"
-            >
-              <span className="mb-1 block text-2xl font-extrabold leading-none text-sunshine">
-                {t(`qf${i}Value`)}
-              </span>
-              <span className="text-[13px] font-medium opacity-95">
-                {t(`qf${i}Label`)}
-              </span>
-            </div>
-          ))}
+          {quickfacts.map((i) => {
+            const Icon = quickfactIcons[i];
+            return (
+              <div
+                key={i}
+                className="rounded-2xl border border-white/20 bg-white/10 px-3.5 py-4 text-center backdrop-blur-lg"
+              >
+                <Icon className="mx-auto mb-1.5 h-5 w-5 opacity-80" />
+                <span className="mb-1 block text-2xl font-extrabold leading-none text-sunshine">
+                  {t(`qf${i}Value`)}
+                </span>
+                <span className="text-[13px] font-medium opacity-95">
+                  {t(`qf${i}Label`)}
+                </span>
+              </div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
