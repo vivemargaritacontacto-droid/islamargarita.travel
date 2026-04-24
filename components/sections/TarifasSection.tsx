@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { Check } from "lucide-react";
 
 const BULLETS = [1, 2, 3, 4] as const;
-const CARD_FEATURES = [1, 2, 3, 4] as const;
+const CARD_FEATURES = [1, 2] as const;
 
 export default function Tarifas() {
   const t = useTranslations("PlayaElAngel.tarifas");

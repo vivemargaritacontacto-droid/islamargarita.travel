@@ -645,18 +645,14 @@
       "card1Price": "40 $",
       "card1Unit": "/ Nacht",
       "card1Feat1": "2 Personen inklusive",
-      "card1Feat2": "Glasfaser-WLAN, voll klimatisiert, Pool",
-      "card1Feat3": "+10 $/Nacht pro zusätzliche Person",
-      "card1Feat4": "Mindestens 3 Nächte",
+      "card1Feat2": "+10 $/Nacht pro zusätzliche Person",
       "card2Badge": "HAUPTSAISON",
       "card2Title": "Termine mit hoher Nachfrage",
       "card2Sub": "Dezember, Ferien Juli–September, Feiertage, Karneval und Osterwoche.",
       "card2Price": "80 $",
       "card2Unit": "/ Nacht",
       "card2Feat1": "Bis zu 4 Personen inklusive",
-      "card2Feat2": "Glasfaser-WLAN, voll klimatisiert, Pool",
-      "card2Feat3": "+10 $/Nacht pro zusätzliche Person",
-      "card2Feat4": "Mindestens 3 Nächte"
+      "card2Feat2": "+10 $/Nacht pro zusätzliche Person"
     },
     "location": {
       "label": "Lage",

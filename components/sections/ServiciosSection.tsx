@@ -19,13 +19,13 @@ import {
 } from "lucide-react";
 
 const SERVICES: { id: number; Icon: LucideIcon }[] = [
-  { id: 1, Icon: Tv },
+  { id: 7, Icon: Wifi },
   { id: 2, Icon: WashingMachine },
   { id: 3, Icon: Flame },
   { id: 4, Icon: UtensilsCrossed },
   { id: 5, Icon: Waves },
   { id: 6, Icon: Snowflake },
-  { id: 7, Icon: Wifi },
+  { id: 1, Icon: Tv },
   { id: 8, Icon: Droplets },
   { id: 9, Icon: ChefHat },
   { id: 10, Icon: Camera },
