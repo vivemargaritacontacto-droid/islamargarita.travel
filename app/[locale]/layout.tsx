@@ -26,8 +26,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: t("title"),
     description: t("description"),
     icons: {
-      icon: "/images/logo-icon.png",
-      apple: "/images/logo-icon.png",
+      icon: "/images/logo-islamargarita.png",
+      apple: "/images/logo-islamargarita.png",
     },
   };
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Phone, Mail, Facebook, Instagram } from "lucide-react";
 
 const NAV_KEYS = [
@@ -21,12 +22,14 @@ export default function Footer() {
     <footer className="bg-ink px-6 pb-8 pt-16 text-white/75">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
         <div>
-          <a
-            href="#hero"
-            className="mb-3 inline-block font-pacifico text-[26px] text-turquoise"
-          >
-            {tNav("brandName")}
-            <span className="text-coral">{tNav("brandAccent")}</span>
+          <a href="#hero" className="mb-4">
+            <Image
+              src="/images/logo-islamargarita.png"
+              alt="Isla Margarita Travel"
+              width={320}
+              height={80}
+              className="h-28 w-auto object-contain drop-shadow-sm"
+            />
           </a>
           <p className="max-w-[320px] text-sm leading-relaxed">
             {t("description")}
