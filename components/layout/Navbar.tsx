@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import LanguageToggle from "@/src/components/language-toggle";
 
 const SECTIONS = [
@@ -35,10 +36,16 @@ export default function Navbar() {
           : "bg-white/80"
       }`}
     >
-      <nav className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-6 py-3.5">
-        <a href="#hero" className="font-pacifico text-[22px] text-turquoise whitespace-nowrap">
-          {t("brandName")}
-          <span className="text-coral">{t("brandAccent")}</span>
+      <nav className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-6 py-2">
+        <a href="#hero" className="flex items-center">
+          <Image
+            src="/images/logo-islamargarita.png"
+            alt="Isla Margarita Travel"
+            width={320}
+            height={80}
+            className="h-16 w-auto object-contain drop-shadow-sm"
+            priority
+          />
         </a>
 
         <div className="hidden items-center gap-6 text-[14.5px] font-medium lg:flex">
