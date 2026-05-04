@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Check } from "lucide-react";
+// import { Check } from "lucide-react";
 
 const CARDS = [
   { num: 1, icon: "📍" },
