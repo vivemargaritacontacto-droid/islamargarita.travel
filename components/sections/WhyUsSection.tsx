@@ -59,14 +59,14 @@ export default function WhyUs() {
                 {t(`r${num}Desc`)}
               </p>
 
-              <div className="mt-5 flex items-center gap-2 border-t border-slate-100 pt-4">
+              {/* <div className="mt-5 flex items-center gap-2 border-t border-slate-100 pt-4">
                 <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-turquoise/15 text-turquoise-dark">
                   <Check className="h-3 w-3 stroke-[2.5]" />
                 </span>
                 <span className="text-[13px] font-medium text-turquoise-dark">
                   {t(`r${num}Check`)}
                 </span>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>

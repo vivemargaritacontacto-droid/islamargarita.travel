@@ -58,7 +58,8 @@
       "feat4": "Cuisine et salle à manger",
       "feat5": "Parking privé",
       "feat6": "Barbecue privé",
-      "reservarCta": "Réserver ce townhouse"
+      "reservarCta": "Réserver ce townhouse",
+      "tourCta": "Voir la visite virtuelle"
     },
     "fotos": {
       "label": "Photos",
@@ -186,7 +187,7 @@
       "contactFacebook": "Facebook",
       "labelName": "Nom complet",
       "placeholderName": "Ex. : Ana García",
-      "labelPhone": "Téléphone (WhatsApp)",
+      "labelPhone": "Téléphone",
       "placeholderPhone": "+58 412 ...",
       "labelEmail": "Email",
       "placeholderEmail": "vous@exemple.com",
@@ -203,7 +204,7 @@
       "guestsOption6": "6 personnes",
       "guestsOption7": "7 personnes",
       "guestsOption8": "8 personnes",
-      "labelPayment": "Moyen de paiement préféré",
+      "labelPayment": "Moyen de paiement",
       "paymentPlaceholder": "Sélectionner",
       "payment1": "Virement USD (Panama)",
       "payment2": "Binance (USDT)",
@@ -282,9 +283,10 @@
       "contactInstagram": "Instagram",
       "navTitle": "Navigation",
       "platformsTitle": "Plateformes",
-      "platformAirbnb": "🏠 Airbnb",
-      "platformGoogle": "⭐ Google",
-      "copyright": "© 2026 Isla Margarita Travel · Playa El Ángel, Île de Margarita, Venezuela"
+      "platformAirbnb": "Airbnb",
+      "platformGoogle": "Google",
+      "copyright": "© 2026 Isla Margarita Travel · Playa El Ángel, Île de Margarita, Venezuela",
+      "platformYoutube": "YouTube"
     },
     "whatsapp": {
       "aria": "WhatsApp",

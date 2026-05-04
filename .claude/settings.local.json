@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i '' 's/\"labelPhone\": \"Teléfono \\(WhatsApp\\)\"/\"labelPhone\": \"Teléfono\"/' \"/Volumes/cesar_job/Proyectos Karla/islamargarita.travel/messages/es.json\")",
+      "Bash(sed -i '' 's/\"labelPayment\": \"Método de pago preferido\"/\"labelPayment\": \"Método de pago\"/' \"/Volumes/cesar_job/Proyectos Karla/islamargarita.travel/messages/es.json\")",
+      "Bash(sed -i '' 's/\"labelPhone\": \"Phone \\(WhatsApp\\)\"/\"labelPhone\": \"Phone\"/' \"/Volumes/cesar_job/Proyectos Karla/islamargarita.travel/messages/en.json\")",
+      "Bash(sed -i '' 's/\"labelPayment\": \"Preferred payment method\"/\"labelPayment\": \"Payment method\"/' \"/Volumes/cesar_job/Proyectos Karla/islamargarita.travel/messages/en.json\")",
+      "Bash(sed -i '' 's/\"labelPhone\": \"Téléphone \\(WhatsApp\\)\"/\"labelPhone\": \"Téléphone\"/' \"/Volumes/cesar_job/Proyectos Karla/islamargarita.travel/messages/fr.json\")",
+      "Bash(npx tsc *)",
+      "Bash(node -e \"const fs=require\\('fs'\\); const d=JSON.parse\\(fs.readFileSync\\('/Volumes/cesar_job/Proyectos Karla/islamargarita.travel/messages/es.json'\\)\\); console.log\\(JSON.stringify\\(d.PlayaElAngel.footer,null,2\\)\\); console.log\\('---'\\); console.log\\(JSON.stringify\\(d.PlayaElAngel.alojamiento,null,2\\)\\);\")",
+      "Bash(node -e ' *)"
+    ]
+  }
+}

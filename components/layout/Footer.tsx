@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { Phone, Mail, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, Facebook, Instagram, Youtube, Home, Star } from "lucide-react";
 
 const NAV_KEYS = [
   { id: "alojamiento", key: "alojamiento" },
@@ -115,6 +115,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-[10px] bg-white/10 px-3.5 py-2.5 text-[13.5px] transition-colors hover:bg-white/20 hover:text-white"
             >
+              <Home className="h-4 w-4 shrink-0" />
               {t("platformAirbnb")}
             </a>
             <a
@@ -123,7 +124,17 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-[10px] bg-white/10 px-3.5 py-2.5 text-[13.5px] transition-colors hover:bg-white/20 hover:text-white"
             >
+              <Star className="h-4 w-4 shrink-0" />
               {t("platformGoogle")}
+            </a>
+            <a
+              href="https://www.youtube.com/@IslaMargarita.travel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-white/10 px-3.5 py-2.5 text-[13.5px] transition-colors hover:bg-white/20 hover:text-white"
+            >
+              <Youtube className="h-4 w-4 shrink-0" />
+              {t("platformYoutube")}
             </a>
           </div>
         </div>

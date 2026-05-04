@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { BedDouble, Sofa, Bath, UtensilsCrossed, Car, Flame } from "lucide-react";
+import { BedDouble, Sofa, Bath, UtensilsCrossed, Car, Flame, Youtube } from "lucide-react";
 
 const FEATURES = [
   { key: "feat1", Icon: BedDouble },
@@ -116,12 +116,23 @@ export default function Alojamiento() {
               ))}
             </ul>
 
-            <a
-              href="#reservar"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-coral px-8 py-4 text-base font-semibold text-white shadow-coral transition-all hover:-translate-y-0.5 hover:bg-coral-dark"
-            >
-              {t("reservarCta")}
-            </a>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#reservar"
+                className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-coral px-8 py-4 text-base font-semibold text-white shadow-coral transition-all hover:-translate-y-0.5 hover:bg-coral-dark"
+              >
+                {t("reservarCta")}
+              </a>
+              <a
+                href="https://youtube.com/shorts/m99oRSpxANw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#FF0000] px-6 py-4 text-[15px] font-semibold text-[#FF0000] transition-all hover:-translate-y-0.5 hover:bg-[#FF0000] hover:text-white"
+              >
+                <Youtube className="h-5 w-5" />
+                {t("tourCta")}
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

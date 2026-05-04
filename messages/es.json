@@ -58,7 +58,8 @@
       "feat4": "Cocina y comedor",
       "feat5": "Estacionamiento privado",
       "feat6": "Parrillera privada",
-      "reservarCta": "Reservar este townhouse"
+      "reservarCta": "Reservar este townhouse",
+      "tourCta": "Ver tour virtual"
     },
     "fotos": {
       "label": "Fotos",
@@ -133,7 +134,7 @@
       "card1Sub": "Días normales (lunes a jueves) fuera de vacaciones y feriados.",
       "card1Price": "$40",
       "card1Unit": "/ noche",
-      "card1Feat1": "Hasta 2 huéspedes",
+      "card1Feat1": "Hasta 4 huéspedes",
       "card1Feat2": "Solo $5 por noche por huésped adicional",
       "card2Badge": "TEMPORADA ALTA",
       "card2Title": "Fechas de alta demanda",
@@ -186,7 +187,7 @@
       "contactFacebook": "Facebook",
       "labelName": "Nombre completo",
       "placeholderName": "Ej: Ana García",
-      "labelPhone": "Teléfono (WhatsApp)",
+      "labelPhone": "Teléfono",
       "placeholderPhone": "+58 412 ...",
       "labelEmail": "Email",
       "placeholderEmail": "tucorreo@ejemplo.com",
@@ -203,7 +204,7 @@
       "guestsOption6": "6 personas",
       "guestsOption7": "7 personas",
       "guestsOption8": "8 personas",
-      "labelPayment": "Método de pago preferido",
+      "labelPayment": "Método de pago",
       "paymentPlaceholder": "Selecciona",
       "payment1": "Transferencia USD (Panamá)",
       "payment2": "Binance (USDT)",
@@ -282,9 +283,10 @@
       "contactInstagram": "Instagram",
       "navTitle": "Navegación",
       "platformsTitle": "Plataformas",
-      "platformAirbnb": "🏠 Airbnb",
-      "platformGoogle": "⭐ Google",
-      "copyright": "© 2026 Isla Margarita Travel · Playa El Ángel, Isla de Margarita, Venezuela"
+      "platformAirbnb": "Airbnb",
+      "platformGoogle": "Google",
+      "copyright": "© 2026 Isla Margarita Travel · Playa El Ángel, Isla de Margarita, Venezuela",
+      "platformYoutube": "YouTube"
     },
     "whatsapp": {
       "aria": "WhatsApp",
