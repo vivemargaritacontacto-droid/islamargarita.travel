@@ -73,10 +73,10 @@ export default function Reservar() {
   }
 
   const inputClass =
-    "w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-[13.5px] text-ink outline-none transition focus:border-turquoise focus:ring-2 focus:ring-turquoise/15";
+    "w-full rounded-xl border border-slate-200 bg-slate-50/60 px-3.5 py-2.5 text-[14px] text-ink outline-none transition placeholder:text-slate-400 focus:border-turquoise focus:bg-white focus:ring-2 focus:ring-turquoise/15";
 
   const labelClass =
-    "mb-1 block text-[11.5px] font-semibold uppercase tracking-[0.5px] text-slate-400";
+    "mb-1.5 block text-[11px] font-bold uppercase tracking-[0.8px] text-slate-400";
 
   return (
     <section
@@ -166,10 +166,10 @@ export default function Reservar() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="rounded-[24px] border border-slate-200 bg-white px-6 py-7 shadow-tropical-lg"
+            className="rounded-[24px] border border-slate-100 bg-white px-5 py-6 shadow-tropical-lg sm:px-7 sm:py-8"
           >
             {/* Row 1: Name + Phone */}
-            <div className="mb-3 grid grid-cols-2 gap-3">
+            <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <label htmlFor="pa-name" className={labelClass}>
                   {t("labelName")}
@@ -201,7 +201,7 @@ export default function Reservar() {
             </div>
 
             {/* Row 2: Arrival + Departure */}
-            <div className="mb-1 grid grid-cols-2 gap-3">
+            <div className="mb-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <label htmlFor="pa-arrival" className={labelClass}>
                   {t("labelArrival")}
@@ -236,29 +236,27 @@ export default function Reservar() {
             <AnimatePresence>
               {nights !== null && (
                 <motion.div
-                  initial={{ opacity: 0, height: 0, marginBottom: 0 }}
-                  animate={{ opacity: 1, height: "auto", marginBottom: 12 }}
-                  exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+                  initial={{ opacity: 0, height: 0, marginTop: 0, marginBottom: 0 }}
+                  animate={{ opacity: 1, height: "auto", marginTop: 10, marginBottom: 16 }}
+                  exit={{ opacity: 0, height: 0, marginTop: 0, marginBottom: 0 }}
                   transition={{ duration: 0.25 }}
                   className="overflow-hidden"
                 >
-                  <div className="flex items-center gap-2.5 rounded-xl bg-turquoise/10 px-3.5 py-2">
-                    <Moon className="h-3.5 w-3.5 text-turquoise-dark" />
+                  <div className="flex items-center gap-2.5 rounded-xl bg-turquoise/10 px-3.5 py-2.5">
+                    <Moon className="h-3.5 w-3.5 shrink-0 text-turquoise-dark" />
                     <span className="text-[13px] font-semibold text-turquoise-dark">
                       {nights} {nights === 1 ? "noche" : "noches"}
                     </span>
-                   
-                      <span className={`ml-auto rounded-full px-2 py-0.5 text-[11px] font-semibold ${nights < 3 ? "bg-coral/10 text-coral" : "bg-turquoise/10 text-turquoise-dark"}`}>
-                      {nights < 3 ? "Mín. 3 noches" : "Es hora de disfrutar"}
-                      </span>
-                    
+                    <span className={`ml-auto shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${nights < 3 ? "bg-coral/10 text-coral" : "bg-turquoise/10 text-turquoise-dark"}`}>
+                      {nights < 3 ? "Mín. 3 noches" : "¡Listo para disfrutar!"}
+                    </span>
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
 
             {/* Row 3: Guests + Payment */}
-            <div className="mb-3 grid grid-cols-2 gap-3">
+            <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <label htmlFor="pa-guests" className={labelClass}>
                   {t("labelGuests")}
@@ -299,10 +297,10 @@ export default function Reservar() {
             </div>
 
             {/* Row 4: Email (optional) */}
-            <div className="mb-3">
+            <div className="mb-4">
               <label htmlFor="pa-email" className={labelClass}>
                 {t("labelEmail")}{" "}
-                <span className="font-normal text-slate-400">(opcional)</span>
+                <span className="font-normal normal-case tracking-normal text-slate-400">(opcional)</span>
               </label>
               <input
                 id="pa-email"
@@ -315,7 +313,7 @@ export default function Reservar() {
             </div>
 
             {/* Row 5: Message (optional) */}
-            <div className="mb-2">
+            <div className="mb-5">
               <label htmlFor="pa-message" className={labelClass}>
                 {t("labelMessage")}
               </label>
@@ -324,15 +322,15 @@ export default function Reservar() {
                 placeholder={t("placeholderMessage")}
                 value={form.message}
                 onChange={(e) => update("message", e.target.value)}
-                className={`${inputClass} min-h-[60px] resize-none`}
+                className={`${inputClass} min-h-[72px] resize-none`}
               />
             </div>
 
             <button
               type="submit"
-              className="mt-2 inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-gradient-to-br from-coral to-coral-dark px-6 py-3.5 text-base font-bold text-white shadow-coral transition-transform hover:-translate-y-0.5"
+              className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-gradient-to-br from-coral to-coral-dark px-6 py-3.5 text-[15px] font-bold text-white shadow-coral transition-transform hover:-translate-y-0.5 active:scale-[0.98]"
             >
-              <Send className="h-4 w-4" />
+              <Send className="h-4 w-4 shrink-0" />
               {t("submit")}
             </button>
             <p className="mt-3 text-center text-[12px] text-slate-400">
